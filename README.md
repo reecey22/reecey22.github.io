@@ -1,7 +1,6 @@
 Niah's Profile page
 
-![alt text](Tateyana.png)
-<img src="Tateyana.png" alt="alt text" width="300" height="200">
+<img src="Tateyana.png" alt="alt text" width="100" height="150">
 
 # About Me
 
