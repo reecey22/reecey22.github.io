@@ -1,6 +1,6 @@
 Niah's Profile page
 
-![alt text](Tateyana.png = 250x250)
+![alt text](Tateyana.png = 250 x 250)
 
 # About Me
 
