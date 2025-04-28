@@ -2,14 +2,21 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0A0A0A; /* deep black background */
     color: #E0E0E0; /* soft silver text */
+    background: #0A0A0A url('https://cdn.pixabay.com/photo/2016/11/19/14/00/space-1833779_960_720.jpg') repeat;
+    background-size: cover;
+
 }
 
 header {
-    background-color: #004aad;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    color: #00FFE7; /* electric teal */
 }
+
+h2 {
+    color: #8F00FF; /* deep neon purple */
+}
+
+
 
 .profile-pic{
     width: 50px;
@@ -20,14 +27,9 @@ header {
 }
 
 .button {
-    background-color: #004aad;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #8F00FF, #00FFE7);
+    color: black;
+    font-weight: bold;
 }
 
 .button:hover {
