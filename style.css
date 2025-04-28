@@ -1,39 +1,19 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #0A0A0A; /* deep black background */
-    color: #E0E0E0; /* soft silver text */
     background: #0A0A0A url('https://cdn.pixabay.com/photo/2016/11/19/14/00/space-1833779_960_720.jpg') repeat;
     background-size: cover;
-
+    color: #E0E0E0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header */
 header {
     background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-    color: #00FFE7; /* electric teal */
-}
-
-h2 {
-    color: #8F00FF; /* deep neon purple */
-}
-
-
-
-.profile-pic{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.button {
-    background: linear-gradient(135deg, #8F00FF, #00FFE7);
-    color: black;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color: #00337f;
+    color: #00FFE7;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 header h1 {
@@ -46,35 +26,82 @@ header p {
     margin-top: 10px;
 }
 
+/* Profile Picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #00FFE7; /* Electric border for profile pic */
+}
+
+/* Sections */
 section {
     padding: 40px 20px;
     max-width: 800px;
     margin: auto;
+    text-align: center;
 }
 
 section h2 {
-    color: #004aad;
+    color: #8F00FF; /* Deep Neon Purple */
     margin-bottom: 15px;
+    font-size: 2em;
 }
 
+/* Lists */
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
+ul li {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Links */
 a {
-    color: #004aad;
+    color: #00FFE7;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Buttons */
+.button {
+    background: linear-gradient(135deg, #8F00FF, #00FFE7);
+    color: black;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #00FFE7, #8F00FF);
+}
+
+/* Footer */
 footer {
-    background-color: #222;
-    color: white;
+    background-color: #111;
+    color: #E0E0E0;
     text-align: center;
     padding: 20px 10px;
     margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Optional: Add subtle shadows to sections for depth */
+section, .button {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
