@@ -1,40 +1,33 @@
-Niah's Profile page
+# Shaniah Reece — Portfolio
 
-<img src="Tateyana.png" alt="alt text" width="100" height="150">
+Live at **https://reecey22.github.io**
 
-# About Me
+UX research and HCI design portfolio. Purple and orange palette drawn from the DABW slides; name set in Parisienne, headings in Bricolage Grotesque, body in Instrument Sans.
 
-Hello there! This is *Shaniah Reece*, A Computer Science student, with a _Human Computer Interaction_ Concentration at Emory University. I hail from Beltsville, Maryland.
+## Files
 
-Fun fact about me: For as long as I can remember I've been a tech nerd. I got my start into computing with the first piece of technology I owned, a good old fashioned Nintendo video game console where I played Super Mario Bros, Bird Shooting and Donkey Kong. 
+| File | What it is |
+|---|---|
+| `index.html` | Home page: intro, how I work, selected work, about, contact |
+| `dabw.html` | Case study: Designing the AfroVerse with Black Women in Computing |
+| `style.css` | Shared styles for every page |
+| `assets/portrait.jpg` | Hero portrait (cropped from `Tateyana.png`) |
 
+## Add photos to the DABW case study
 
-## My Brief Bio :D
+Put images in `assets/` with these names. Any that are missing stay hidden.
 
-I am a fourth year PhD student at Emory with research interests at the intersections of Human Computer Interaction, Physical Computing and Health / Equity. I joined Emory after completing my Bachelor's Degree in Information Sytems from the University of Maryland, Baltimore County. 
+| File | Where it shows |
+|---|---|
+| `dabw-cover.jpg` | Replaces the illustration on the home page project card |
+| `dabw-1.jpg` … `dabw-4.jpg` | Prototypes section of the case study |
 
-### How to get in touch?
+## Add a new project
 
-- Email: streece@emory.edu 
-- Github: reecey22
+1. Copy `dabw.html` to a new file (for example `my-project.html`) and replace the content.
+2. In `index.html`, copy the `<a class="feature">` block under **Selected work**, point it at the new page, and update the text.
+3. Delete the "More case studies are on the way" box once you have a second project.
 
+## Add LinkedIn or a CV
 
-
-Where you teach
-First “tech” you owned
-Hometown
-Field of Study
-Contact info (publicly available, like your school email. Optional)
-Brief Bio about yourself
-
-
-Must use markdown elements:
-Link
-H1, H2 (done)
-Table
-Image
-Italics (done)
-Bold (done)
-Ordered list
-Checkboxes
-Unordered list
+In `index.html`, find the commented-out LinkedIn and CV buttons in the contact section, fill in the link, and remove the `<!--` and `-->` around them.
