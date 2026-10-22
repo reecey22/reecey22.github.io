@@ -1,45 +1,481 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset = "UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<title> Shaniah Reece | PhD Student | UX Researcher | Wellness Advocate</title>
-<link rel = "stylesheet" href = "style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaniah Reece | Portfolio</title>
+  <meta name="description" content="Shaniah Reece — PhD researcher at Emory University. Technical projects in HCI, computing education, and making." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Montserrat:wght@500;700;800&family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ---------- Palette pulled from the DABW Quals slides ---------- */
+    :root {
+      --navy: #2B1B55;        /* deep purple (case study background) */
+      --ink: #1A1230;         /* midnight purple (hero, footer) */
+      --purple: #7B4BD1;      /* primary purple */
+      --lavender: #CDB8F2;    /* light purple accents */
+      --lavender-soft: #EEE5FB;
+      --mist: #F8F3FC;        /* page background */
+      --orange: #F5893A;      /* primary orange */
+      --pink: #FFB37A;        /* soft orange-peach for text on dark */
+      --violet: #7B4BD1;
+      --glow: #FF9A3C;        /* sunset orange */
+      --text: #24183F;
+      --muted: #5E5478;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--mist);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+    h1, h2, h3 { font-family: "Montserrat", sans-serif; line-height: 1.15; }
+    .serif { font-family: "Playfair Display", serif; font-style: italic; font-weight: 500; }
+
+    /* ---------- Nav ---------- */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(28, 35, 41, .92);
+      backdrop-filter: blur(8px);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: "Parisienne", cursive; font-size: 1.7rem; color: #fff; text-decoration: none; }
+    .logo span { color: var(--orange); }
+    nav ul { list-style: none; display: flex; gap: 26px; }
+    nav ul a { color: var(--lavender); text-decoration: none; font-size: .92rem; font-weight: 500; }
+    nav ul a:hover { color: #fff; }
+    @media (max-width: 560px) { nav ul { gap: 14px; } nav ul a { font-size: .82rem; } }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 110px 0 120px;
+    }
+    .hero::before, .hero::after {
+      content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+    }
+    .hero::before {
+      width: 600px; height: 600px; right: -140px; top: -120px;
+      background: radial-gradient(circle at 40% 40%, var(--glow) 0%, #E2577A 30%, var(--purple) 58%, transparent 72%);
+      opacity: .75;
+    }
+    .hero::after {
+      width: 260px; height: 260px; right: 220px; bottom: -110px;
+      background: var(--purple); opacity: .35;
+    }
+    .hero .wrap { position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-block; font-size: .78rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: #fff; background: var(--purple);
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 26px;
+    }
+    .hero h1 { font-family: "Parisienne", cursive; font-weight: 400; font-size: clamp(3.6rem, 11vw, 7rem); line-height: 1.05; color: #fff; }
+    .hero h1 .serif { font-family: "Playfair Display", serif; color: var(--pink); display: block; font-size: clamp(1.3rem, 3.4vw, 2rem); margin-top: 14px; }
+    .hero p.lede { max-width: 620px; margin-top: 26px; font-size: 1.12rem; color: #DCDAF0; }
+    .btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .btn {
+      display: inline-block; padding: 13px 26px; border-radius: 999px; text-decoration: none;
+      font-weight: 600; font-size: .95rem; transition: transform .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--orange); color: #1A1230; }
+    .btn-ghost { border: 1.5px solid var(--lavender); color: #fff; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 96px 0; }
+    .section-head { margin-bottom: 48px; }
+    .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; text-transform: uppercase; }
+    .section-head p { color: var(--muted); max-width: 640px; margin-top: 10px; }
+    .dots { display: flex; gap: 8px; margin-bottom: 14px; }
+    .dots i { width: 14px; height: 14px; border-radius: 50%; background: var(--purple); }
+    .dots i:nth-child(2) { background: var(--orange); }
+    .dots i:nth-child(3) { background: var(--navy); }
+
+    /* ---------- Project grid ---------- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 26px; }
+    .card {
+      background: #fff; border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 10px 30px rgba(38, 43, 79, .08);
+      display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(38, 43, 79, .14); }
+    .card-art {
+      aspect-ratio: 16 / 9; background: linear-gradient(135deg, var(--purple), #C2508A 60%, var(--orange)); position: relative; overflow: hidden;
+      display: grid; place-items: center;
+    }
+    .card-art img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .card-art .num {
+      font-family: "Montserrat"; font-weight: 800; font-size: 3.4rem; color: #fff; opacity: .95;
+    }
+    .card-body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex: 1; }
+    .card-meta { font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); }
+    .card h3 { font-size: 1.25rem; margin: 8px 0 10px; }
+    .card p { color: var(--muted); font-size: .96rem; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .tag { font-size: .78rem; padding: 5px 12px; border-radius: 999px; background: var(--lavender-soft); color: var(--purple); font-weight: 600; }
+    .card .more { margin-top: 20px; font-weight: 600; color: var(--navy); text-decoration: none; font-size: .93rem; }
+    .card .more:hover { color: var(--violet); }
+    .card.placeholder { border: 2px dashed var(--lavender); box-shadow: none; background: transparent; }
+    .card.placeholder .card-art { background: var(--lavender-soft); }
+    .card.placeholder .num { color: var(--purple); opacity: .5; }
+
+    /* ---------- Case study ---------- */
+    .case { background: var(--navy); color: #fff; border-radius: 0; }
+    .case .section-head p { color: var(--lavender); }
+    .case .eyebrow { margin-bottom: 18px; }
+    .case-intro { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+    .case-intro p { color: #DCDAF0; margin-bottom: 16px; }
+    .facts { background: rgba(255,255,255,.06); border: 1px solid rgba(197,195,235,.25); border-radius: var(--radius); padding: 28px; }
+    .facts dl { display: grid; gap: 16px; }
+    .facts dt { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); font-weight: 600; }
+    .facts dd { color: #fff; font-size: .97rem; }
+    @media (max-width: 820px) { .case-intro { grid-template-columns: 1fr; } }
+
+    .sub { margin-top: 72px; }
+    .sub h3 { font-size: 1.4rem; text-transform: uppercase; margin-bottom: 24px; }
+    .sub h3 .serif { text-transform: none; color: var(--pink); }
+
+    /* timeline — mirrors the "Creating the DABW Makerspace" slide */
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; position: relative; }
+    .timeline::before {
+      content: ""; position: absolute; top: 18px; left: 6%; right: 6%; height: 3px; background: linear-gradient(90deg, var(--purple), var(--orange)); opacity: .8;
+    }
+    .phase { position: relative; padding-top: 52px; }
+    .phase::before {
+      content: ""; position: absolute; top: 4px; left: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--purple);
+    }
+    .phase.pink::before { background: var(--orange); }
+    .phase h4 { font-family: "Montserrat"; font-size: 1.15rem; font-weight: 700; }
+    .phase .when { color: var(--pink); font-size: .85rem; font-weight: 600; margin-bottom: 8px; }
+    .phase ul { list-style: none; color: #DCDAF0; font-size: .9rem; }
+    .phase li { padding: 2px 0; }
+    @media (max-width: 820px) {
+      .timeline { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+      .timeline::before { display: none; }
+    }
+    @media (max-width: 460px) { .timeline { grid-template-columns: 1fr; } }
+
+    .machines { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .machine {
+      background: var(--mist); color: var(--navy); border-radius: var(--radius); padding: 22px;
+    }
+    .machine b { font-family: "Montserrat"; display: block; font-size: 1rem; margin-bottom: 4px; color: var(--purple); }
+    .machine span { font-size: .88rem; color: var(--muted); }
+
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    @media (max-width: 820px) { .two { grid-template-columns: 1fr; } }
+    .panel { background: rgba(255,255,255,.06); border-radius: var(--radius); padding: 28px; border-top: 5px solid var(--purple); }
+    .panel.pink { border-top-color: var(--orange); }
+    .panel h4 { font-family: "Montserrat"; font-size: 1.05rem; margin-bottom: 14px; }
+    .panel ul { padding-left: 20px; color: #DCDAF0; }
+    .panel li { margin-bottom: 8px; }
+
+    blockquote {
+      margin-top: 40px; padding: 32px 36px; border-radius: var(--radius);
+      background: linear-gradient(120deg, var(--purple), #B9468F 55%, var(--orange)); color: #fff; position: relative;
+    }
+    blockquote p { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.2rem; line-height: 1.55; }
+    blockquote cite { display: block; margin-top: 14px; font-style: normal; font-weight: 600; font-size: .9rem; color: #FFE3CC; }
+
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .gallery figure { border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.08); aspect-ratio: 4/3; position: relative; }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery figcaption {
+      position: absolute; inset: auto 0 0 0; padding: 10px 14px; font-size: .82rem;
+      background: linear-gradient(transparent, rgba(28,35,41,.85)); color: #fff;
+    }
+
+    .team { display: flex; flex-wrap: wrap; gap: 10px; }
+    .team span { background: rgba(197,195,235,.15); border: 1px solid rgba(197,195,235,.35); padding: 8px 14px; border-radius: 999px; font-size: .88rem; }
+    .team span.me { background: var(--orange); color: #1A1230; border-color: var(--orange); font-weight: 600; }
+
+    /* ---------- About / contact ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: center; }
+    .portrait {
+      aspect-ratio: 1; border-radius: 50%; background: linear-gradient(135deg, var(--lavender), var(--purple));
+      position: relative; overflow: hidden; max-width: 360px;
+      box-shadow: 18px 18px 0 var(--orange);
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; }
+    .about-grid p { color: var(--muted); margin-bottom: 16px; font-size: 1.04rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    @media (max-width: 820px) { .about-grid { grid-template-columns: 1fr; } .portrait { max-width: 260px; } }
+
+    footer { background: var(--ink); color: var(--lavender); padding: 72px 0 40px; }
+    footer h2 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.4rem); text-transform: uppercase; font-weight: 800; }
+    footer .links { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 56px; }
+    footer small { color: #8F8DB0; }
+  </style>
 </head>
-  
 <body>
-<header>
-<h1> Shaniah Reece </h1>
-  <p> PhD Student >>  UX Researcher >> Empowerment Advocate </p>
-  <img src = "Tateyana.png" class = "profile-pic">
-</header>
 
-<section id = "about-me">
-<h2> About Me </h2>
-  
-<p>Hello there! My name is Shaniah Reece. I am a second year PhD student
-in Computer Science fascinated with afrofuturism and maker spaces. I love
-using technology and being creative. </p>
+  <nav>
+    <div class="wrap">
+      <a href="#top" class="logo">Shaniah<span>.</span></a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#dabw">DABW</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<section id = "what-i-do">
-<h2> What I Do? </h2>
-  
-<li>
-<ul><strong>Tech Consulting</strong></ul>
-<ul><strong>Welness Advocate</strong></ul>
-<ul><strong>Women in Computing Advocate</strong></ul>
-</li>
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow">PhD Researcher · Emory University</span>
+      <h1>Shaniah Reece<span class="serif">designing technology with, not about, Black women</span></h1>
+      <p class="lede">
+        I build and study technical spaces where Black women create, not just consume. My work spans
+        human-computer interaction, physical computing, and Black feminist approaches to design.
+      </p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </header>
 
-<h2>Projects</h2>
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <h2>Technical Projects</h2>
+        <p>A running record of what I've built, studied, and shipped, newest additions at the end.</p>
+      </div>
 
-<h2>Contact Me</h2>
-<p> Let's collaborate or connect!
-<a href="streece@emory.edu.com" class="button">Contact Me</a>
-<footer>
-<p> Shaniah Reece 2025. All Rights Reserved.</p>
-</footer>
+      <div class="grid">
+        <!-- Project 01: DABW -->
+        <article class="card">
+          <div class="card-art">
+            <span class="num">01</span>
+            <!-- Drop a cover image in assets/ and it will replace the number -->
+            <img src="assets/dabw-cover.jpg" alt="Designing the AfroVerse title art" onerror="this.remove()" />
+          </div>
+          <div class="card-body">
+            <span class="card-meta">2025 – 2026 · Research + Making</span>
+            <h3>Designing the AfroVerse with Black Women in Computing</h3>
+            <p>A Black feminist–informed pop-up makerspace where Black women designed Afrofuturist e-textile prototypes using fabrication tools and sewable electronics.</p>
+            <div class="tags">
+              <span class="tag">HCI</span><span class="tag">E-Textiles</span><span class="tag">LilyPad Arduino</span><span class="tag">3D Printing</span><span class="tag">Qualitative Research</span>
+            </div>
+            <a class="more" href="#dabw">Read the case study →</a>
+          </div>
+        </article>
 
-  
+        <!-- TEMPLATE: copy this <article> block for each new project and fill it in -->
+        <article class="card placeholder">
+          <div class="card-art"><span class="num">02</span></div>
+          <div class="card-body">
+            <span class="card-meta">Year · Type</span>
+            <h3>Next project</h3>
+            <p>One or two sentences on what you built, the problem it solves, and your role.</p>
+            <div class="tags"><span class="tag">Tool</span><span class="tag">Language</span></div>
+          </div>
+        </article>
+
+        <article class="card placeholder">
+          <div class="card-art"><span class="num">03</span></div>
+          <div class="card-body">
+            <span class="card-meta">Year · Type</span>
+            <h3>Next project</h3>
+            <p>One or two sentences on what you built, the problem it solves, and your role.</p>
+            <div class="tags"><span class="tag">Tool</span><span class="tag">Language</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DABW CASE STUDY ================= -->
+  <section class="case" id="dabw">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Project 01 · Case Study</span>
+        <h2>Designing the AfroVerse<br/><span class="serif" style="text-transform:none;color:var(--pink);font-weight:500">with Black Women in Computing</span></h2>
+        <p>Co-creating a makerspace for Black women</p>
+      </div>
+
+      <div class="case-intro">
+        <div>
+          <p>
+            Makerspaces promise to broaden participation in computing, but they often reproduce exclusionary
+            power structures and masculine norms. DABW is our answer: a Black feminist–informed makerspace
+            where women can commune, create, and learn in a psychologically, emotionally, and physically safe environment.
+          </p>
+          <p>
+            Without a permanent room, we designed the space to be <strong>transient, flexible, and periodic</strong>: a
+            pop-up makerspace that travels from storage to classroom. That portability makes it more accessible to
+            women with transportation, financial, or space limitations.
+          </p>
+          <p>
+            We extended <strong>sister circles</strong>, an established method for research <em>with</em> Black women,
+            beyond dialogue into design and making. The circle became the infrastructure through which participants
+            critiqued, imagined, and built Afrofuturist technologies.
+          </p>
+        </div>
+        <aside class="facts">
+          <dl>
+            <div><dt>My role</dt><dd>Lead researcher · facilitator</dd></div>
+            <div><dt>Timeline</dt><dd>Spring 2025 – Spring 2026</dd></div>
+            <div><dt>Participants</dt><dd>6 Black women participants, Black women facilitators</dd></div>
+            <div><dt>Theme</dt><dd>E-Textiles</dd></div>
+            <div><dt>Methods</dt><dd>Sister circles, PAR-informed design, surveys, journals, video, sketchbooks, artifact analysis</dd></div>
+            <div><dt>Lab</dt><dd>Directed by Dr. Yolanda Rankin, Emory University</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="sub">
+        <h3>Research <span class="serif">questions</span></h3>
+        <div class="two">
+          <div class="panel"><h4>RQ1</h4><p style="color:#DCDAF0">How can we apply Black Feminist Epistemologies to create a makerspace that affirms the intersectional identities of women of the African diaspora?</p></div>
+          <div class="panel pink"><h4>RQ2</h4><p style="color:#DCDAF0">Using sister circles as the underlying infrastructure, what is the impact of the makerspace on its Black women facilitators and participants?</p></div>
+        </div>
+      </div>
+
+      <div class="sub">
+        <h3>How we <span class="serif">built it</span></h3>
+        <div class="timeline">
+          <div class="phase"><h4>Planning</h4><div class="when">SP25</div>
+            <ul><li>Ethics training</li><li>Workshop ideation</li><li>Literature review</li><li>IRB protocol</li></ul></div>
+          <div class="phase"><h4>Training</h4><div class="when">SP25, FA25</div>
+            <ul><li>Learned every machine</li><li>Refined design activities</li><li>Recruitment</li><li>Machine purchase</li></ul></div>
+          <div class="phase pink"><h4>Execution</h4><div class="when">FA25</div>
+            <ul><li>Design sessions</li><li>Office hours</li><li>Data collection</li></ul></div>
+          <div class="phase pink"><h4>Analysis</h4><div class="when">SP26</div>
+            <ul><li>Grounding &amp; reflection</li><li>Sketchbook + artifact analysis</li><li>Writing</li></ul></div>
+        </div>
+      </div>
+
+      <div class="sub">
+        <h3>The <span class="serif">toolkit</span></h3>
+        <div class="machines">
+          <div class="machine"><b>Cricut Maker 4</b><span>Precision cutting for fabric, vinyl, and paper</span></div>
+          <div class="machine"><b>LilyPad Arduino</b><span>Sewable electronics and circuits</span></div>
+          <div class="machine"><b>Embroidery Machine</b><span>Digital pattern stitching</span></div>
+          <div class="machine"><b>3D Printing</b><span>Rapid prototyping of hard parts</span></div>
+        </div>
+        <p style="color:#DCDAF0;margin-top:20px;max-width:760px">
+          Participants designed from six Afrofuturist prompts (Beauty, Health, Self-Care, Love, Social Justice, and Quality of Life)
+          moving from problem definition and user stories to sketches and physical prototypes.
+        </p>
+      </div>
+
+      <div class="sub">
+        <h3>Artifacts <span class="serif">&amp; prototypes</span></h3>
+        <!-- Add photos to assets/ with these names (or edit the src). Missing images are hidden automatically. -->
+        <div class="gallery">
+          <figure><img src="assets/dabw-1.jpg" alt="DABW prototype" onerror="this.parentElement.remove()" /><figcaption>Prototype</figcaption></figure>
+          <figure><img src="assets/dabw-2.jpg" alt="DABW prototype" onerror="this.parentElement.remove()" /><figcaption>Initial idea → final prototype</figcaption></figure>
+          <figure><img src="assets/dabw-3.jpg" alt="DABW makerspace session" onerror="this.parentElement.remove()" /><figcaption>Makerspace session</figcaption></figure>
+          <figure><img src="assets/dabw-4.jpg" alt="Participant sketchbook" onerror="this.parentElement.remove()" /><figcaption>Sketchbook</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="sub">
+        <h3>What we <span class="serif">found</span></h3>
+        <div class="two">
+          <div class="panel">
+            <h4>Impact on participants &amp; facilitators</h4>
+            <ul>
+              <li>Black women acquired new technical skills</li>
+              <li>Black women felt like they belonged</li>
+              <li>Black women co-created community</li>
+              <li>Black women increased their interest in tech</li>
+            </ul>
+          </div>
+          <div class="panel pink">
+            <h4>Design commitments for HCI</h4>
+            <ul>
+              <li>Treat <em>welcoming</em> and <em>safe</em> as separate design targets</li>
+              <li>Build multiple entry points into making</li>
+              <li>Offer physical and temporal flexibility</li>
+              <li>Design for restraint, not just presence: plan for distributed power</li>
+            </ul>
+          </div>
+        </div>
+        <blockquote>
+          <p>“I have more positive feelings about computing… I didn’t realize that it merged so nicely with e-textiles and 3D printing and all these things.”</p>
+          <cite>— Jayla, DABW participant</cite>
+        </blockquote>
+      </div>
+
+      <div class="sub">
+        <h3>The <span class="serif">team</span></h3>
+        <div class="team">
+          <span class="me">Shaniah Reece</span><span>Yolanda Rankin (Director)</span><span>Khloe Wright</span><span>Nyah Rene</span>
+          <span>Andrina McQuick</span><span>Kayla Ferjuste</span><span>Taylor Henderson</span><span>Kultum Lhabaik</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="portrait">
+                <img src="Tateyana.png" alt="Shaniah Reece" onerror="this.remove()" />
+      </div>
+      <div>
+        <div class="dots"><i></i><i></i><i></i></div>
+        <h2 style="font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;text-transform:uppercase;margin-bottom:20px">About me</h2>
+        <p>
+          I'm a PhD student at Emory University working at the intersection of human-computer interaction,
+          computing education, and Black feminist thought. I design hands-on technical experiences, from
+          makerspaces to prototypes, that position Black women as innovators and producers of technology.
+        </p>
+        <p>
+          My research sits at the intersections of human-computer interaction, physical computing, and health
+          equity. Before Emory, I earned my bachelor's in Information Systems from the University of Maryland,
+          Baltimore County. Outside the lab, I do tech consulting and advocate for wellness and for women in computing.
+        </p>
+        <p>
+          I've been a tech nerd for as long as I can remember. It started with a Nintendo console, Super Mario Bros,
+          and Donkey Kong.
+        </p>
+        <div class="skills">
+          <span class="tag">Arduino / physical computing</span><span class="tag">Digital fabrication</span>
+          <span class="tag">Participatory design</span><span class="tag">Qualitative methods</span>
+          <span class="tag">Workshop facilitation</span><span class="tag">Tech consulting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <footer id="contact">
+    <div class="wrap">
+      <h2>Let's build <span class="serif" style="text-transform:none;color:var(--pink)">something</span></h2>
+      <div class="links">
+        <a class="btn btn-primary" href="mailto:streece@emory.edu">Email</a>
+        <a class="btn btn-ghost" href="https://github.com/reecey22">GitHub</a>
+        <!-- Add later: <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a> -->
+        <!-- Add later: <a class="btn btn-ghost" href="assets/cv.pdf">CV</a> -->
+      </div>
+      <small>© 2026 Shaniah Reece · Hosted on GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    // Hide the artifacts section until at least one photo exists in assets/
+    window.addEventListener('load', () => {
+      const g = document.querySelector('.gallery');
+      if (g && !g.querySelector('figure')) g.closest('.sub').remove();
+    });
+  </script>
 </body>
 </html>
