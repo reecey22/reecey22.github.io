@@ -11,9 +11,9 @@ Fun fact about me: For as long as I can remember I've been a tech nerd. I got my
 
 ## My Brief Bio :D
 
-I am a 2nd year PhD student at Emory with research interests at the intersections of Human Computer Interaction, Physical Computing and Health / Equity. I joined Emory after completing my Bachelor's Degree in Information Sytems from the University of Maryland, Baltimore County. 
+I am a fourth year PhD student at Emory with research interests at the intersections of Human Computer Interaction, Physical Computing and Health / Equity. I joined Emory after completing my Bachelor's Degree in Information Sytems from the University of Maryland, Baltimore County. 
 
-### Wanna get in touch?
+### How to get in touch?
 
 - Email: streece@emory.edu 
 - Github: reecey22
