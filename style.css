@@ -21,7 +21,7 @@
 
   --display: "Bricolage Grotesque", system-ui, sans-serif;
   --body: "Instrument Sans", system-ui, sans-serif;
-  --script: "Parisienne", cursive;
+  --script: "Dancing Script", cursive;
 
   --measure: 64ch;
   --wrap: 1180px;
@@ -63,7 +63,7 @@ p { max-width: var(--measure); }
   color: var(--on-dark);
 }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.nav-name { font-family: var(--script); font-size: 1.85rem; text-decoration: none; line-height: 1; padding-top: 4px; }
+.nav-name { font-family: var(--script); font-weight: 500; font-size: 1.6rem; text-decoration: none; line-height: 1; padding-top: 4px; }
 .nav ul { list-style: none; display: flex; gap: clamp(14px, 3vw, 32px); }
 .nav ul a { text-decoration: none; font-size: .95rem; font-weight: 500; color: var(--on-dark-muted); padding: 6px 0; border-bottom: 2px solid transparent; }
 .nav ul a:hover, .nav ul a[aria-current="page"] { color: #fff; border-color: var(--marigold); }
@@ -100,7 +100,7 @@ p { max-width: var(--measure); }
   align-items: center; padding: clamp(56px, 9vw, 112px) 0 clamp(64px, 9vw, 120px);
 }
 .hello { font-size: 1.05rem; color: var(--on-dark-muted); margin-bottom: 6px; }
-.hero-name { font-family: var(--script); font-weight: 400; font-size: clamp(4rem, 10vw, 7.4rem); line-height: .95; letter-spacing: 0; color: #fff; }
+.hero-name { font-family: var(--script); font-weight: 500; font-size: clamp(2.8rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: 0; color: #fff; }
 .hero-role {
   font-family: var(--display); font-weight: 600; font-size: clamp(1.45rem, 2.8vw, 2.1rem);
   line-height: 1.2; letter-spacing: -0.02em; margin-top: 22px; color: var(--lilac); max-width: 22ch;

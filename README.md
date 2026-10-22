@@ -2,7 +2,7 @@
 
 Live at **https://reecey22.github.io**
 
-UX research and HCI design portfolio. Purple and orange palette drawn from the DABW slides; name set in Parisienne, headings in Bricolage Grotesque, body in Instrument Sans.
+UX research and HCI design portfolio. Purple and orange palette drawn from the DABW slides; name set in Dancing Script, headings in Bricolage Grotesque, body in Instrument Sans.
 
 ## Files
 
