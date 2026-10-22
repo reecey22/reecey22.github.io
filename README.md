@@ -11,7 +11,7 @@ UX research and HCI design portfolio. Purple and orange palette drawn from the D
 | `index.html` | Home page: intro, how I work, selected work, about, contact |
 | `dabw.html` | Case study: Designing the AfroVerse with Black Women in Computing |
 | `style.css` | Shared styles for every page |
-| `assets/portrait.jpg` | Hero portrait (cropped from `Tateyana.png`) |
+| `assets/Niah_Headshot.png` | Hero portrait |
 
 ## Add photos to the DABW case study
 
