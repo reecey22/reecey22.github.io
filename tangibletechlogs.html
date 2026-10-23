@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TangibleTechLogs | Shaniah Reece</title>
+  <meta name="description" content="Case study: a physical computing journal and EduCube, a tangible classroom feedback device." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="nav-name" href="index.html">Shaniah</a>
+      <ul>
+        <li><a href="index.html#work" aria-current="page">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="cs-hero">
+    <svg class="cs-hero-art" viewBox="0 0 520 420" aria-hidden="true">
+      <g transform="translate(250 120)">
+        <path d="M0 40 L110 0 L220 40 L110 80 Z" fill="#DEE2FF" opacity=".25" />
+        <path d="M0 40 L110 80 L110 210 L0 170 Z" fill="#5B63D6" opacity=".55" />
+        <path d="M110 80 L220 40 L220 170 L110 210 Z" fill="#5B63D6" opacity=".3" />
+        <circle cx="55" cy="118" r="10" fill="#FFC15A" /><circle cx="55" cy="118" r="22" fill="#FFC15A" opacity=".3" />
+      </g>
+      <path class="stitch" d="M40 390 C 120 330, 180 360, 250 290" />
+    </svg>
+    <div class="wrap">
+      <a class="back" href="index.html#work">Back to all work</a>
+      <h1>TangibleTechLogs</h1>
+      <p class="lead">My physical computing journal, and the project it grew into: EduCube, an on-desk cube that lets students in large lectures tell their professor they're lost without raising a hand.</p>
+    </div>
+  </header>
+
+  <section class="overview" aria-label="Project overview">
+    <div class="wrap">
+      <dl>
+        <div><dt>My role</dt><dd>Designer, maker and researcher (solo)</dd></div>
+        <div><dt>Context</dt><dd>Physical computing course, Emory University</dd></div>
+        <div><dt>Built with</dt><dd>Arduino, capacitive sensing, NeoPixel LEDs</dd></div>
+        <div><dt>Journal</dt><dd><a href="https://github.com/reecey22/TangibleTechLogs" style="color:#fff">TangibleTechLogs on GitHub</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+
+        <div class="cs-block">
+          <h2>The journal</h2>
+          <div class="cs-block-body">
+            <p class="lead">TangibleTechLogs started as a class requirement and became my working notebook: sketches, experiments, mistakes, successes and reflections from learning physical computing.</p>
+            <p>An early warm-up set the tone. I set out to make a pop-up business card that reflected my love for computing, realized how complex pop-up mechanisms were, and by the sixth iteration chose laser-cut graphics instead. That's the design funnel in miniature: start broad, learn the constraints, then commit to what you can build well.</p>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>The problem</h2>
+          <div class="cs-block-body">
+            <p>I storyboarded what goes wrong in a large, amphitheater-style lecture:</p>
+            <dl class="rows" style="margin-top:18px">
+              <div><dt>Out of sight</dt><dd>A student has had her hand up for five slides, outside the professor's field of vision.</dd></div>
+              <div><dt>Afraid to interrupt</dt><dd>Another is confused but nervous to stop the lecture.</dd></div>
+              <div><dt>Afraid to sound silly</dt><dd>A third is dying to share but worries about how it will sound.</dd></div>
+              <div><dt>No time to build polls</dt><dd>Professors are already swamped. Designing interactive polls for every class is a burden.</dd></div>
+            </dl>
+            <figure class="figure"><img src="assets/ttl-storyboard.jpg" alt="Six-panel hand-drawn storyboard of students struggling to be noticed in a large lecture, ending with the EduCube" loading="lazy" width="1400" height="1050" /><figcaption>The storyboard, from a crowded lecture hall to EduCube</figcaption></figure>
+            <p class="callout">How might students signal what they need in the moment, discreetly, without adding work for the professor?</p>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>What the research said</h2>
+          <div class="cs-block-body">
+            <dl class="rows">
+              <div><dt>Clickers fall short</dt><dd>Clickers give fast, anonymous answers to multiple-choice questions but little room for richer feedback. ClassQue (Robbins, 2011) added open-ended responses and peer feedback.</dd></div>
+              <div><dt>Glanceable light</dt><dd>An LED-matrix edge display (Pohl et al., 2016) shows notifications without demanding direct interaction, so people choose how much to engage.</dd></div>
+              <div><dt>Touch on a cube</dt><dd>Tangible Touch used capacitive sensing on a cube to recognize taps and swipes, and found double-taps most reliable.</dd></div>
+              <div><dt>Low-tech has value</dt><dd>Old-Skool Tech (Ross et al., 2024) argues for physical, human-centered designs as a counterweight to automation.</dd></div>
+              <div><dt>Tangible input</dt><dd>Coder Cards (Lin et al., 2023) show how physical objects can carry instructions that a device reads, mirroring block-based programming.</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>Exploring directions</h2>
+          <div class="cs-block-body">
+            <p>I sketched several semester project ideas, including a light-up tic-tac-toe board and a Connect Four game on an RGB light matrix, and pitched two directions: a smart paper checklist that turns handwritten tasks into digital ones with a swipe, and EduCube. EduCube had the clearest user, problem and moment of use.</p>
+            <figure class="figure"><img src="assets/ttl-ideas.jpg" alt="Sketchbook page of semester project ideas, including LED tic-tac-toe and Connect Four" loading="lazy" width="1400" height="1050" /><figcaption>Early ideas: games built from buttons, speakers and LED matrices</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>The concept: EduCube</h2>
+          <div class="cs-block-body">
+            <p>An interactive on-desk cube. Each face does one job:</p>
+            <div class="faces">
+              <div class="face"><b>Face 1</b><span>Emoji reactions</span></div>
+              <div class="face"><b>Face 2</b><span>Icon shortcuts, like a question</span></div>
+              <div class="face"><b>Face 3</b><span>Touch keypad for short messages</span></div>
+              <div class="face"><b>Face 4</b><span>A display that shows the student's current state</span></div>
+            </div>
+            <p style="margin-top:22px">When a student taps a reaction, the display lights up with a pulse to catch the professor's eye, color-coded by sentiment: <span class="signal" style="background:#3BB273"></span>positive, <span class="signal" style="background:#F2C94C"></span>neutral and <span class="signal" style="background:#E5484D"></span>negative. The professor sees an aggregate of reactions and comments for each lecture.</p>
+            <figure class="figure"><img src="assets/ttl-cube-faces.jpg" alt="Sketches of the EduCube's four faces, the color-coded display and the professor's aggregated view, with critique notes" loading="lazy" width="1400" height="1050" /><figcaption>The four faces, the pulsing display and the professor's view, with critique notes</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>Why a cube, not a phone</h2>
+          <div class="cs-block-body">
+            <dl class="rows">
+              <div><dt>Always on</dt><dd>Feedback is constant, not limited to moments when a poll is open.</dd></div>
+              <div><dt>Discreet</dt><dd>Shy or nervous students can speak up without being singled out.</dd></div>
+              <div><dt>No distraction</dt><dd>No small screen pulling attention away from the lecture.</dd></div>
+              <div><dt>Familiar</dt><dd>Straightforward to use, and color does most of the communicating.</dd></div>
+              <div><dt>Less work</dt><dd>It saves professors from building polls for every class.</dd></div>
+            </dl>
+            <p style="margin-top:18px">Critique feedback called it thoughtful and widely applicable, with particular benefit for introverted students. It also raised a fair question: some professors may not want constant feedback, so the display should be easy to turn off.</p>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>Building it</h2>
+          <div class="cs-block-body">
+            <p>For the final build, I prototyped the two pieces the concept depends on: touch input and a light display that's readable across a room.</p>
+            <div class="media-grid">
+              <figure class="figure">
+                <video src="assets/ttl-touch-demo.mp4" poster="assets/ttl-touch-demo-poster.jpg" controls muted playsinline loop preload="metadata" aria-label="Video: touching a metal plate lights an LED on the Arduino breadboard"></video>
+                <figcaption>Capacitive touch: a hand on the plate lights the LED</figcaption>
+              </figure>
+              <figure class="figure"><img src="assets/ttl-led-matrix.jpg" alt="A grid of glowing green NeoPixel LEDs wired to a breadboard" loading="lazy" width="900" height="1200" /><figcaption>Testing a 300-LED NeoPixel matrix</figcaption></figure>
+              <figure class="figure"><img src="assets/ttl-enclosure.jpg" alt="Wooden enclosure with an acrylic window being sprayed with frosted glass finish" loading="lazy" width="900" height="1200" /><figcaption>Frosting the acrylic to diffuse the LEDs</figcaption></figure>
+            </div>
+            <p style="margin-top:26px">Three capacitive sensors, each wired through a 10&nbsp;MΩ resistor, toggle their own LED. A debounce window keeps one touch from registering twice:</p>
+<pre class="code"><span class="c">// Touch toggles the LED once per press</span>
+<span class="k">if</span> (yes1 &amp;&amp; !previous1 &amp;&amp; millis() - time &gt; debounce) {
+  state1 = (state1 == LOW) ? HIGH : LOW;
+  time = millis();
+}
+digitalWrite(led1, state1);
+previous1 = yes1;</pre>
+            <p style="margin-top:18px"><a href="https://github.com/reecey22/TangibleTechLogs" class="btn btn-dark">See the code and full journal on GitHub</a></p>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>What I took away</h2>
+          <div class="cs-block-body">
+            <ul class="reflect">
+              <li>Simplicity is a design decision. Choosing what not to build, like the pop-up card, is what made the rest buildable.</li>
+              <li>A storyboard does a lot of work. Drawing the lecture hall made the problem and the moment of use obvious before any code.</li>
+              <li>Physical form changes behavior. A cube on the desk invites feedback in a way a phone app competing for attention doesn't.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>Tools and resources</h2>
+          <div class="cs-block-body">
+            <ul class="team-list">
+              <li>Arduino</li><li>CapacitiveSensor library</li><li>Adafruit NeoPixel</li><li>TinkerCad</li><li>Breadboarding</li><li>Laser cutting</li><li>Sketching and storyboarding</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Want to see more of the journal?</h2>
+        <p class="lead">Every sketch, experiment and line of code is logged on GitHub. I'm also happy to walk through the build.</p>
+        <div class="hero-actions">
+          <a class="btn btn-thread" href="https://github.com/reecey22/TangibleTechLogs">Open TangibleTechLogs</a>
+          <a class="btn btn-outline" href="index.html#work">Back to all work</a>
+        </div>
+        <div class="footer">
+          <span>© 2026 Shaniah Reece</span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
