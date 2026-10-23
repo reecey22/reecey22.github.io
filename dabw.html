@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -147,15 +147,41 @@
           </div>
         </div>
 
-        <!-- PHOTOS: add images to the assets folder with these names. Any that are missing are hidden. -->
-        <div class="cs-block" id="photos">
-          <h2>Prototypes</h2>
+        <div class="cs-block">
+          <h2>One build, start to finish</h2>
           <div class="cs-block-body">
-            <div class="photos">
-              <figure><img src="assets/dabw-1.jpg" alt="Participant prototype" onerror="this.parentElement.remove()" /><figcaption>First idea to final prototype</figcaption></figure>
-              <figure><img src="assets/dabw-2.jpg" alt="Participant prototype" onerror="this.parentElement.remove()" /><figcaption>Final prototype</figcaption></figure>
-              <figure><img src="assets/dabw-3.jpg" alt="Makerspace session" onerror="this.parentElement.remove()" /><figcaption>A design session in the pop-up makerspace</figcaption></figure>
-              <figure><img src="assets/dabw-4.jpg" alt="Participant sketchbook" onerror="this.parentElement.remove()" /><figcaption>Sketchbook pages</figcaption></figure>
+            <p class="lead">Imani's "Covenant" shirt shows the full arc a participant took, from an idea on the whiteboard to a garment that responds to its surroundings.</p>
+            <p>She sketched a tree rooted in a meditating Black woman, a design she connected to the chronically invisible labor that sustains communities. She cut the layers on the Cricut, heat-pressed them onto a shirt, then built a sewable circuit on the back.</p>
+            <figure class="figure"><img src="assets/dabw-imani-sketch.jpg" alt="Whiteboard sketch of a tree with LEDs in its canopy, roots of embroidery and conductive thread, and a meditating woman at the base" loading="lazy" width="1344" height="846" /><figcaption>The idea, sketched in a design session: LEDs in the canopy, embroidered and conductive-thread roots</figcaption></figure>
+            <div class="shots">
+              <figure class="figure"><img src="assets/dabw-imani-vinyl.jpg" alt="Cut vinyl layers of the tree and meditating woman, with weeded scraps" loading="lazy" width="646" height="693" /><figcaption>Cutting and weeding the vinyl layers</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-imani-heatpress.jpg" alt="Hands pressing a heat press onto a white shirt next to the Cricut" loading="lazy" width="646" height="657" /><figcaption>Heat-pressing the design</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-imani-front.jpg" alt="Finished white shirt with a green tree whose roots wrap a glittering gold meditating woman" loading="lazy" width="647" height="846" /><figcaption>The finished front</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-imani-circuit.jpg" alt="Back of the shirt with copper-tape traces, a LilyPad Arduino, coin cell battery and alligator clips" loading="lazy" width="647" height="846" /><figcaption>The circuit on the back: copper tape, LilyPad, coin cell and a light sensor</figcaption></figure>
+            </div>
+            <p style="margin-top:22px">A photoresistor reads the room. When it gets dark, the LEDs light one after another, like a walkway:</p>
+<pre class="code"><span class="c">// When the room is dark, light the LEDs in sequence</span>
+lightValue = analogRead(sensorPin);
+<span class="k">if</span> (lightValue &gt; darkLevel) {
+  digitalWrite(ledPinA, HIGH); delay(1000);
+  digitalWrite(ledPin2, HIGH); delay(1000);
+  digitalWrite(ledPin3, HIGH); delay(1000);
+  digitalWrite(ledPin4, HIGH); delay(1000);
+  digitalWrite(ledPin1, HIGH);
+}</pre>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>What participants made</h2>
+          <div class="cs-block-body">
+            <p>Given full control, every participant designed from her own life. These are some of the finished pieces.</p>
+            <div class="artifacts">
+              <figure class="figure"><img src="assets/dabw-diamond-congo.jpg" alt="Fabric collage of a yellow sky, a felt sun and patterned red and teal mountains with fringed edges" loading="lazy" width="864" height="764" /><figcaption>Diamond: a Congo free of war, in fabric</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-asia-shirts.jpg" alt="Black shirts with affirmations: Reserved for greatness, My future is Black not bleak, an embroidered Psalm 61:5, and copper tape traces" loading="lazy" width="970" height="560" /><figcaption>Asia: affirmation shirts with embroidery and a copper-tape circuit</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-danielle-straightener.jpg" alt="Concept sheet for a micro-penetration heat straightener for locs, with labeled parts and features" loading="lazy" width="970" height="553" /><figcaption>Danielle: a heat straightener designed for locs</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-jayla-cubes.jpg" alt="Two 3D-printed cubes with maze-like patterns, one dark and one clear, on purple felt" loading="lazy" width="638" height="657" /><figcaption>Jayla: 3D-printed patterned cubes</figcaption></figure>
+              <figure class="figure"><img src="assets/dabw-jasmine-belt.jpg" alt="A long pink and white fabric belt with an Arduino, breadboard and servo motor mounted on it" loading="lazy" width="450" height="846" /><figcaption>Jasmine: a belt where a button drives a servo and lights an LED</figcaption></figure>
             </div>
           </div>
         </div>
@@ -263,12 +289,5 @@
       </div>
     </section>
   </main>
-  <script>
-    // Hide the Prototypes section until at least one photo is in the assets folder
-    window.addEventListener('load', function () {
-      var p = document.getElementById('photos');
-      if (p && !p.querySelector('figure')) p.remove();
-    });
-  </script>
 </body>
 </html>

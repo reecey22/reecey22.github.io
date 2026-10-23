@@ -345,3 +345,7 @@ p { max-width: var(--measure); }
 .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 20px; }
 .shots .figure { margin-top: 0; }
 @media (max-width: 760px) { .shots { grid-template-columns: 1fr; } }
+.shots .figure img { width: 100%; height: auto; }
+.artifacts { columns: 3 220px; column-gap: 16px; margin-top: 20px; }
+.artifacts .figure { break-inside: avoid; margin: 0 0 16px; display: inline-block; width: 100%; }
+.artifacts .figure img { width: 100%; height: auto; }
