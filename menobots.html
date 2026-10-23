@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=13" />
+  <link rel="stylesheet" href="style.css?v=14" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -56,7 +56,7 @@
 
         <div class="glance" aria-label="At a glance">
           <div><h2>The challenge</h2><p>Menopause is undertaught in medical residency, and women, especially underserved women, feel that gap in their care.</p></div>
-          <div><h2>What I did</h2><p>Led a co-design workshop with women in menopause, then designed the resident study: baseline survey, focus-group question bank and a two-cohort co-design protocol for an AI training chatbot.</p></div>
+          <div><h2>What I did</h2><p>Led a co-design workshop with women in menopause and guided the team from their narratives to four app concepts, then designed the resident study: baseline survey, focus-group question bank and a two-cohort co-design protocol for an AI training chatbot.</p></div>
           <div><h2>The outcome</h2><p>Phase 1 pointed the solution at clinicians. Phase 2 is now generating requirements with OB/GYN residents for the chatbot prototype.</p></div>
         </div>
 
@@ -93,6 +93,58 @@
             </dl>
             <p style="margin-top:28px">Participants proposed telehealth and apps in women's own languages, peer and community support, workplace accommodations, chatbot-based education and training for clinicians in culturally competent care.</p>
             <p class="callout">Many of the strongest ideas pointed back to the clinician. That set the direction for Phase 2.</p>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>Design provocations</h2>
+          <div class="cs-block-body">
+            <p class="lead">Next, each researcher on the team took one participant narrative and designed a concept for her, moving from persona to hand sketches, high-fidelity screens and an interactive demo.</p>
+            <p>The goal wasn't to pick a product. It was to provoke: to make each woman's barriers concrete enough that we could see which kinds of technology, including LLMs, might actually help.</p>
+
+            <div class="concept">
+              <h3>A neighborhood support circle</h3>
+              <p class="concept-meta">Designed by Manvi, for Keisha, 47: a high school teacher in perimenopause who is also caring for her mother</p>
+              <p>A local group where women trade help, like covering caregiving for a few hours, through a shared help calendar, plus a symptom hub that pairs provider advice with tips from women who've been there.</p>
+              <div class="shots">
+                <figure class="figure"><img src="assets/meno-circle-sketch.jpg" alt="Hand sketch of the group chat, help calendar and symptom screens" loading="lazy" width="596" height="335" /><figcaption>From paper sketch</figcaption></figure>
+                <figure class="figure"><img src="assets/meno-circle-gallery.jpg" alt="Gallery of high-fidelity screens: group chat, help calendar, symptom hub and resource library" loading="lazy" width="596" height="335" /><figcaption>to high-fidelity screens</figcaption></figure>
+              </div>
+            </div>
+
+            <div class="concept">
+              <h3>Contigo</h3>
+              <p class="concept-meta">Designed by Aradhana, for Maria: undocumented, Spanish-speaking, working long hours and afraid of institutions</p>
+              <p>A private, bilingual health app shared through church bulletins. No account or documents needed. It checks symptoms, explains what's normal, connects her to telehealth, trusted clinics or other women, prepares her for the visit, and lets her decide what gets shared with providers.</p>
+              <div class="shots">
+                <figure class="figure"><img src="assets/meno-contigo-ad.jpg" alt="Church bulletin ad for Contigo in plain language with a QR code" loading="lazy" width="596" height="335" /><figcaption>Reaching women where they already get information</figcaption></figure>
+                <figure class="figure"><img src="assets/meno-contigo-triage.jpg" alt="Anonymous bilingual sign-in and symptom checker screens" loading="lazy" width="596" height="335" /><figcaption>Anonymous sign-in and symptom triage</figcaption></figure>
+                <figure class="figure"><img src="assets/meno-contigo-care.jpg" alt="Care option screens: talk to a doctor, find a clinic, talk to other women" loading="lazy" width="596" height="335" /><figcaption>Care options without ID or insurance</figcaption></figure>
+                <figure class="figure"><img src="assets/meno-contigo-provider.jpg" alt="Provider-side screens: patient list, notes and referral" loading="lazy" width="596" height="335" /><figcaption>The provider side of the same flow</figcaption></figure>
+              </div>
+            </div>
+
+            <div class="concept">
+              <h3>Meridian</h3>
+              <p class="concept-meta">Designed by Zhu Xu, for Tasha, 49: postmenopausal, living with fibromyalgia and juggling specialists who don't talk to each other</p>
+              <p>A care-coordination app. One-tap and wearable symptom logging feeds a shared, living patient summary, and an LLM turns the weeks between visits into a pre-visit brief for both patient and clinician. Scheduling ranks appointments by how reachable they are on her transit.</p>
+              <div class="shots">
+                <figure class="figure"><img src="assets/meno-meridian-architecture.jpg" alt="System diagram: patient app and wearables feed the Meridian core, which syncs with providers and EHRs" loading="lazy" width="596" height="335" /><figcaption>System architecture, with an LLM care summary at the core</figcaption></figure>
+                <figure class="figure"><img src="assets/meno-meridian-today.jpg" alt="Morning summary and hot flash trend screens" loading="lazy" width="596" height="335" /><figcaption>Daily summary and symptom patterns</figcaption></figure>
+              </div>
+            </div>
+
+            <div class="concept">
+              <h3>MenoCareBot</h3>
+              <p class="concept-meta">Designed by Sumon, for a woman whose South Asian family never discussed menopause</p>
+              <p>An app that pairs a FAQ chatbot with community groups organized by cultural context and direct access to menopause specialists.</p>
+              <div class="shots">
+                <figure class="figure"><img src="assets/meno-menocarebot-sketch.jpg" alt="Sketch and screen of a mood and mental health community group" loading="lazy" width="596" height="335" /><figcaption>Sketch to screen</figcaption></figure>
+                <figure class="figure"><img src="assets/meno-menocarebot-groups.jpg" alt="Screens for joining and creating community groups" loading="lazy" width="596" height="335" /><figcaption>Groups shaped by culture, treatment and daily life</figcaption></figure>
+              </div>
+            </div>
+
+            <p class="callout">Across all four concepts, the same needs kept surfacing: privacy, peer knowledge, language access and clinicians who understand. LLMs showed up where the work was translation and summary, which set up Phase 2.</p>
           </div>
         </div>
 
