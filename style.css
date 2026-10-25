@@ -386,7 +386,7 @@ p { max-width: var(--measure); }
 /* "Ask about Shaniah" assistant */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .ask-launcher { position: fixed; right: 18px; bottom: 14px; z-index: 40; display: inline-flex; align-items: center; gap: 2px; padding: 0; border: 0; background: none; cursor: pointer; color: var(--night); }
-.ask-launcher-blob { display: block; width: 76px; height: 76px; filter: drop-shadow(0 8px 16px rgba(18,26,54,.35)); transition: transform .25s; }
+.ask-launcher-blob { display: block; width: 76px; height: 76px; filter: drop-shadow(0 6px 18px rgba(91,99,214,.45)); transition: transform .25s; }
 .ask-launcher-label { order: -1; display: grid; text-align: right; padding: 9px 14px; border-radius: 16px 16px 4px 16px; background: #fff; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(18,26,54,.18); font: 600 .95rem/1.2 var(--body); }
 .ask-launcher-label small { font-weight: 500; font-size: .78rem; color: var(--muted); }
 .ask-launcher:hover .ask-launcher-blob { transform: scale(1.08) rotate(-3deg); }
@@ -434,6 +434,9 @@ p { max-width: var(--measure); }
 /* Sapphire's little life: floating, blinking, glittering */
 .sapphire { overflow: visible; display: block; }
 .sapphire .sph-float { animation: sph-float 4s ease-in-out infinite; }
+.sapphire .sph-nebula { transform-origin: 60px 68px; animation: sph-drift 7s ease-in-out infinite; }
+.sapphire .sph-wisp1, .sapphire .sph-wisp2, .sapphire .sph-wisp3 { animation: sph-wisp 5s ease-in-out infinite; }
+.sapphire .sph-wisp2 { animation-delay: -2.5s; }
 .sapphire .sph-body { transform-origin: 60px 106px; animation: sph-squish 4s ease-in-out infinite; }
 .sapphire .sph-eyes { transform-box: fill-box; transform-origin: center; animation: sph-blink 5s infinite; }
 .sapphire .sph-halo { animation: sph-halo 4s ease-in-out infinite; }
@@ -441,6 +444,8 @@ p { max-width: var(--measure); }
 .sapphire .sph-sparkles path, .sapphire .sph-glitter path { transform-box: fill-box; transform-origin: center; animation: sph-twinkle 2.4s ease-in-out infinite; }
 .sapphire .sk2, .sapphire .gl2 { animation-delay: .8s !important; }
 .sapphire .sk3, .sapphire .gl3 { animation-delay: 1.6s !important; }
+@keyframes sph-drift { 0%, 100% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(4deg) scale(1.03); } }
+@keyframes sph-wisp { 0%, 100% { transform: translate(0, 0); opacity: .45; } 50% { transform: translate(3px, -3px); opacity: .7; } }
 @keyframes sph-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 @keyframes sph-squish { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.03, .97); } }
 @keyframes sph-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
