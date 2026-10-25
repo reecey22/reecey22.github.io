@@ -34,7 +34,7 @@ The resume lives at `assets/Shaniah_Reece_Resume.pdf` and is linked from the her
 
 ## Sapphire, the "Ask about Shaniah" assistant
 
-Sapphire, the glittery blob in the bottom-right corner of every page, opens a chat that answers questions about Shaniah. Her look and animations live in `assistant/sapphire.js`; her voice (greeting, celestial `lead` lines, fallback) lives in `knowledge.json`.
+Sapphire, the glittery blob in the bottom-right corner of every page, opens a chat that answers questions about Shaniah. Her look, shape-shifting and moods (idle, listening, thinking, happy, puzzled) live in `assistant/sapphire.js` and `style.css`; her voice (greeting, celestial `lead` lines, fallback) lives in `knowledge.json`.
 
 | File | What it is |
 |---|---|

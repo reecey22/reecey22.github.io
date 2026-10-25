@@ -439,7 +439,6 @@ p { max-width: var(--measure); }
 .sapphire .sph-wisp2 { animation-delay: -2.5s; }
 .sapphire .sph-body { transform-origin: 60px 106px; animation: sph-squish 4s ease-in-out infinite; }
 .sapphire .sph-eyes { transform-box: fill-box; transform-origin: center; animation: sph-blink 5s infinite; }
-.sapphire .sph-halo { animation: sph-halo 4s ease-in-out infinite; }
 .sapphire .sph-aura { animation: sph-aura 4s ease-in-out infinite; }
 .sapphire .sph-sparkles path, .sapphire .sph-glitter path { transform-box: fill-box; transform-origin: center; animation: sph-twinkle 2.4s ease-in-out infinite; }
 .sapphire .sk2, .sapphire .gl2 { animation-delay: .8s !important; }
@@ -449,10 +448,36 @@ p { max-width: var(--measure); }
 @keyframes sph-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 @keyframes sph-squish { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.03, .97); } }
 @keyframes sph-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
-@keyframes sph-halo { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-2px); opacity: .8; } }
 @keyframes sph-aura { 0%, 100% { opacity: .6; } 50% { opacity: 1; } }
 @keyframes sph-twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(.4) rotate(45deg); opacity: .35; } }
+/* Sapphire's moods */
+.sapphire .sph-look, .sapphire .sph-face, .sapphire .sph-nebula, .sapphire .sph-open, .sapphire .sph-happy, .sapphire .sph-mouth > * { transition: transform .35s cubic-bezier(.3,1.4,.5,1), opacity .25s, filter .5s; }
+.sapphire .sph-face { transform-box: view-box; transform-origin: 60px 72px; }
+.sapphire .sph-happy, .sapphire .m-grin, .sapphire .m-o, .sapphire .m-flat { opacity: 0; }
+.sapphire[data-mood="listening"] .sph-look { transform: translate(-1.5px, 2px); }
+.sapphire[data-mood="listening"] .sph-face { transform: rotate(-4deg); }
+.sapphire[data-mood="thinking"] .sph-look { transform: translate(2px, -2.5px); }
+.sapphire[data-mood="thinking"] .sph-face { transform: rotate(5deg); }
+.sapphire[data-mood="thinking"] .m-smile { opacity: 0; }
+.sapphire[data-mood="thinking"] .m-flat { opacity: 1; }
+.sapphire[data-mood="thinking"] .sph-nebula { filter: hue-rotate(-25deg) brightness(1.12); animation-duration: 2.5s; }
+.sapphire[data-mood="happy"] .sph-open { opacity: 0; }
+.sapphire[data-mood="happy"] .sph-happy { opacity: 1; }
+.sapphire[data-mood="happy"] .m-smile { opacity: 0; }
+.sapphire[data-mood="happy"] .m-grin { opacity: 1; }
+.sapphire[data-mood="happy"] .sph-nebula { filter: hue-rotate(18deg) saturate(1.2); }
+.sapphire[data-mood="happy"] .sph-float { animation: sph-bounce .6s ease-out 2; }
+.sapphire[data-mood="puzzled"] .sph-face { transform: rotate(-8deg); }
+.sapphire[data-mood="puzzled"] .sph-look { transform: translate(-2px, -1px); }
+.sapphire[data-mood="puzzled"] .m-smile { opacity: 0; }
+.sapphire[data-mood="puzzled"] .m-o { opacity: 1; }
+@keyframes sph-bounce { 0%, 100% { transform: translateY(0) scale(1, 1); } 30% { transform: translateY(-8px) scale(.96, 1.05); } 60% { transform: translateY(1px) scale(1.05, .95); } }
+.ask-launcher:hover .sapphire .sph-open, .ask-launcher:focus-visible .sapphire .sph-open { opacity: 0; }
+.ask-launcher:hover .sapphire .sph-happy, .ask-launcher:focus-visible .sapphire .sph-happy { opacity: 1; }
+.ask-launcher:hover .sapphire .m-smile { opacity: 0; }
+.ask-launcher:hover .sapphire .m-grin { opacity: 1; }
+
 @media (prefers-reduced-motion: reduce) {
-  .ask-typing i, .sapphire * { animation: none !important; }
+  .ask-typing i, .sapphire * { animation: none !important; transition: none !important; }
   .ask-launcher-blob { transition: none; }
 }

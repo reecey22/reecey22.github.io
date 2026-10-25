@@ -9,7 +9,7 @@
   var AI_ENDPOINT = ''; // e.g. 'https://ask-shaniah.<your-subdomain>.workers.dev'
 
   var KB_URL = 'assistant/knowledge.json';
-  var kb = null, history = [], busy = false;
+  var kb = null, history = [], busy = false, moodTimer = null;
 
   // ---------- Build the widget ----------
   var launcher = el('button', { class: 'ask-launcher', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'ask-panel' });
@@ -39,6 +39,14 @@
   launcher.addEventListener('click', function () { panel.hidden ? open() : close(); });
   panel.querySelector('.ask-close').addEventListener('click', close);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) close(); });
+  // Sapphire reacts: she leans in while you type, then thinks, then shows how it went.
+  function mood(m, ms) {
+    clearTimeout(moodTimer);
+    if (window.sapphireMood) window.sapphireMood(m);
+    if (ms) moodTimer = setTimeout(function () { mood(input.value.trim() && document.activeElement === input ? 'listening' : 'idle'); }, ms);
+  }
+  input.addEventListener('input', function () { if (!busy) mood(input.value.trim() ? 'listening' : 'idle'); });
+  input.addEventListener('blur', function () { if (!busy && !moodTimer) mood('idle'); });
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var q = input.value.trim();
@@ -82,6 +90,7 @@
     clearChips();
     user(q);
     busy = true;
+    mood('thinking');
     var typing = bot('<span class="ask-typing"><i></i><i></i><i></i><em>' + (kb.thinking || 'Thinking…') + '</em></span>');
     var scripted = match(q), answerEl;
 
@@ -92,13 +101,16 @@
         var m = bot('');
         m.textContent = aiText; // AI text is shown as plain text, never as HTML
         answerEl = m;
+        mood('happy', 2600);
         history.push({ role: 'user', content: q }, { role: 'assistant', content: aiText });
         history = history.slice(-8);
         chips(scripted ? scripted.related : kb.starters);
       } else if (scripted) {
+        mood('happy', 2600);
         answerEl = bot((scripted.lead ? '<span class="ask-lead">' + scripted.lead + '</span>' : '') + scripted.answer);
         chips(scripted.related);
       } else {
+        mood('puzzled', 3200);
         answerEl = bot(kb.fallback);
         chips(kb.starters);
       }
