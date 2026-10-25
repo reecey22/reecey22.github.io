@@ -38,6 +38,31 @@
   var input = panel.querySelector('#ask-input');
 
   launcher.addEventListener('click', function () { panel.hidden ? open() : close(); });
+
+  // Tickle: rubbing the pointer back and forth over Sapphire makes her giggle.
+  function tickleable(target) {
+    var lastX = null, dir = 0, flips = [], cooldown = 0;
+    target.addEventListener('pointermove', function (e) {
+      if (lastX === null) { lastX = e.clientX; return; }
+      var dx = e.clientX - lastX;
+      if (Math.abs(dx) < 3) return;
+      var d = dx > 0 ? 1 : -1;
+      lastX = e.clientX;
+      if (dir && d !== dir) {
+        var now = Date.now();
+        flips.push(now);
+        flips = flips.filter(function (t) { return now - t < 1200; });
+        if (flips.length >= 4 && now > cooldown && !busy) {
+          flips = []; cooldown = now + 2200;
+          mood('giggle', 1700);
+        }
+      }
+      dir = d;
+    });
+    target.addEventListener('pointerleave', function () { lastX = null; dir = 0; });
+  }
+  tickleable(launcher.querySelector('.ask-launcher-blob'));
+  tickleable(panel.querySelector('.ask-avatar'));
   panel.querySelector('.ask-close').addEventListener('click', close);
   var soundBtn = panel.querySelector('.ask-sound');
   function sound(name) { if (window.sapphireSound) window.sapphireSound(name); }

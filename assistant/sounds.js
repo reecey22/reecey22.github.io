@@ -1,5 +1,5 @@
 /* Sapphire's sounds: soft celestial chimes made with the Web Audio API (no audio files).
-   window.sapphireSound(name) plays one of: 'open', 'close', 'listening', 'thinking', 'happy', 'puzzled'.
+   window.sapphireSound(name) plays one of: 'open', 'close', 'listening', 'thinking', 'happy', 'puzzled', 'giggle'.
    window.sapphireSound.muted (true/false) is remembered per visitor. */
 (function () {
   var ctx = null, master = null, space = null;
@@ -48,6 +48,25 @@
     });
   }
 
+  // One giggle syllable ("hee"): a bright little voice that chirps down in pitch.
+  function hee(ac, dest, verb, freq, t, dur, vol) {
+    var g = ac.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    var formant = ac.createBiquadFilter(); formant.type = 'bandpass'; formant.frequency.value = 2400; formant.Q.value = 1.2;
+    var body = ac.createGain(); body.gain.value = 0.6;
+    formant.connect(g); body.connect(g); g.connect(dest); g.connect(verb);
+    var o = ac.createOscillator(); o.type = 'triangle';
+    o.frequency.setValueAtTime(freq * 1.08, t);
+    o.frequency.exponentialRampToValueAtTime(freq * 0.86, t + dur);
+    var s2 = ac.createOscillator(); s2.type = 'sine';
+    s2.frequency.setValueAtTime(freq * 1.08, t);
+    s2.frequency.exponentialRampToValueAtTime(freq * 0.86, t + dur);
+    o.connect(formant); s2.connect(body);
+    o.start(t); s2.start(t); o.stop(t + dur + 0.03); s2.stop(t + dur + 0.03);
+  }
+
   // Notes from a dreamy pentatonic scale.
   var N = { G4: 392, A4: 440, C5: 523.25, D5: 587.33, E5: 659.25, G5: 783.99, A5: 880, C6: 1046.5, D6: 1174.66, E6: 1318.5, G6: 1568, A6: 1760 };
   function sparkle(ac, d, v, t, count, spread) {
@@ -61,6 +80,11 @@
     listening: function (ac, d, v, t) { note(ac, d, v, N.A4, t, 0.35, 0.12); note(ac, d, v, N.D5, t + 0.09, 0.45, 0.1); },
     thinking: function (ac, d, v, t) { [N.E6, N.G5, N.D6, N.A5, N.C6].forEach(function (f, i) { note(ac, d, v, f, t + i * 0.13, 0.7, 0.06); }); },
     happy: function (ac, d, v, t) { [N.E5, N.G5, N.C6].forEach(function (f, i) { note(ac, d, v, f, t + i * 0.08, 1.0, 0.15); }); sparkle(ac, d, v, t + 0.26, 5, 0.05); },
+    giggle: function (ac, d, v, t) {
+      var f = 880;
+      for (var i = 0; i < 6; i++) { hee(ac, d, v, f, t, 0.085, 0.28); t += 0.115; f *= (i === 4 ? 1.12 : 0.955); }
+      sparkle(ac, d, v, t, 4, 0.05);
+    },
     puzzled: function (ac, d, v, t) { note(ac, d, v, N.D5, t, 0.32, 0.12); note(ac, d, v, N.A4, t + 0.16, 0.6, 0.12, { bendTo: N.D5 }); }
   };
 
