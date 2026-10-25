@@ -28,6 +28,6 @@ Put images in `assets/` with these names. Any that are missing stay hidden.
 2. In `index.html`, copy the `<a class="feature">` block under **Selected work**, point it at the new page, and update the text.
 3. Delete the "More case studies are on the way" box once you have a second project.
 
-## Add LinkedIn or a CV
+## Update the resume
 
-In `index.html`, find the commented-out LinkedIn and CV buttons in the contact section, fill in the link, and remove the `<!--` and `-->` around them.
+The resume lives at `assets/Shaniah_Reece_Resume.pdf` and is linked from the hero and contact buttons in `index.html`. To update it, replace that file with a new PDF of the same name.
