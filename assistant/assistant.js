@@ -13,13 +13,13 @@
 
   // ---------- Build the widget ----------
   var launcher = el('button', { class: 'ask-launcher', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'ask-panel' });
-  launcher.innerHTML = '<span class="ask-launcher-blob">' + window.sapphireSVG(76) + '</span><span class="ask-launcher-label">Ask Sapphire<small>about Shaniah</small></span>';
+  launcher.innerHTML = '<span class="ask-launcher-blob">' + window.sapphireSVG(76) + '</span><span class="ask-launcher-label">Ask Sapphire<small>about Niah</small></span>';
 
-  var panel = el('section', { class: 'ask-panel', id: 'ask-panel', role: 'dialog', 'aria-label': 'Ask Sapphire about Shaniah', hidden: '' });
+  var panel = el('section', { class: 'ask-panel', id: 'ask-panel', role: 'dialog', 'aria-label': 'Ask Sapphire about Niah', hidden: '' });
   panel.innerHTML =
     '<header class="ask-head">' +
       '<span class="ask-avatar">' + window.sapphireSVG(52) + '</span>' +
-      '<div><strong>Sapphire</strong><span class="ask-sub">Celestial guide to Shaniah\'s work</span></div>' +
+      '<div><strong>Sapphire</strong><span class="ask-sub">Celestial guide to Niah\'s work</span></div>' +
       '<button type="button" class="ask-close" aria-label="Close">&times;</button>' +
     '</header>' +
     '<div class="ask-log" aria-live="polite"></div>' +
@@ -73,7 +73,7 @@
     if (kb) return Promise.resolve();
     return fetch(KB_URL).then(function (r) { return r.json(); }).then(function (d) { kb = d; })
       .catch(function () {
-        kb = { greeting: 'Sorry, I couldn\'t load my answers right now.', fallback: '<a href="index.html#contact">Send Shaniah a message</a> instead.', starters: [], entries: [] };
+        kb = { greeting: 'Sorry, I couldn\'t load my answers right now.', fallback: '<a href="index.html#contact">Send Niah a message</a> instead.', starters: [], entries: [] };
       });
   }
 

@@ -1,9 +1,9 @@
 {
-  "name": "Ask about Shaniah",
-  "subtitle": "Celestial guide to Shaniah's work",
+  "name": "Ask about Niah",
+  "subtitle": "Celestial guide to Niah's work",
   "thinking": "Sapphire is consulting the stars…",
-  "greeting": "<span class=\"ask-lead\">✧ Greetings, seeker. I am Sapphire.</span>I have watched Shaniah's research unfold among the stars, and I know her gifts, her passions and her path. Ask, and it shall be revealed.",
-  "fallback": "<span class=\"ask-lead\">Even my celestial sight has its limits.</span>That answer rests with Shaniah herself. <a href=\"index.html#contact\">Send her a message</a> and she will reveal it.",
+  "greeting": "<span class=\"ask-lead\">✧ Greetings, seeker. I am Sapphire.</span>I have watched Niah's research unfold among the stars, and I know her gifts, her passions and her path. Ask, and it shall be revealed.",
+  "fallback": "<span class=\"ask-lead\">Even my celestial sight has its limits.</span>That answer rests with Niah herself. <a href=\"index.html#contact\">Send her a message</a> and she will reveal it.",
   "starters": [
     "strengths",
     "excites",
@@ -14,7 +14,7 @@
   "entries": [
     {
       "id": "about",
-      "question": "Who is Shaniah?",
+      "question": "Who is Niah?",
       "keywords": [
         "who is she",
         "who is shaniah",
@@ -24,16 +24,23 @@
         "summary",
         "background",
         "herself",
-        "elevator pitch"
+        "elevator pitch",
+        "who is niah",
+        "niah",
+        "nickname",
+        "go by",
+        "goes by",
+        "call her"
       ],
       "broad": [
         "about her",
         "about shaniah",
         "about yourself",
-        "about you"
+        "about you",
+        "about niah"
       ],
       "lead": "Ah, you wish to know her essence.",
-      "answer": "Shaniah Reece is a UX researcher and product designer and a PhD researcher in Computer Science at Emory University. She plans studies, runs co-design workshops, turns findings into design decisions and prototypes the result, from AI health tools to wearable hardware. Her work sits where human-computer interaction, physical computing and health equity meet.",
+      "answer": "Shaniah Reece, who goes by Niah, is a UX researcher and product designer and a PhD researcher in Computer Science at Emory University. She plans studies, runs co-design workshops, turns findings into design decisions and prototypes the result, from AI health tools to wearable hardware. Her work sits where human-computer interaction, physical computing and health equity meet.",
       "related": [
         "strengths",
         "excites",
@@ -97,7 +104,7 @@
         "why does she do"
       ],
       "lead": "I have seen what sets her spirit alight.",
-      "answer": "Shaniah has been a tech nerd since her first Nintendo. What excites her most:<ul><li><strong>Making people the inventors, not the afterthought.</strong> She builds spaces where Black women get to design and build technology, not just use it.</li><li><strong>The moment craft meets code</strong>, like when a participant who sews realizes she can stitch a working circuit into a shirt.</li><li><strong>AI that closes real gaps in care</strong>, like her current work on an AI chatbot that trains OB/GYN residents in menopause care.</li><li><strong>Watching people's own stories turn into designs</strong> through co-design.</li></ul>Outside the lab she does tech consulting and advocates for wellness and for women in computing.",
+      "answer": "Niah has been a tech nerd since her first Nintendo. What excites her most:<ul><li><strong>Making people the inventors, not the afterthought.</strong> She builds spaces where Black women get to design and build technology, not just use it.</li><li><strong>The moment craft meets code</strong>, like when a participant who sews realizes she can stitch a working circuit into a shirt.</li><li><strong>AI that closes real gaps in care</strong>, like her current work on an AI chatbot that trains OB/GYN residents in menopause care.</li><li><strong>Watching people's own stories turn into designs</strong> through co-design.</li></ul>Outside the lab she does tech consulting and advocates for wellness and for women in computing.",
       "related": [
         "dabw",
         "ai",
@@ -130,7 +137,7 @@
         "process"
       ],
       "lead": "Her instruments of understanding are many.",
-      "answer": "Shaniah's research toolkit:<ul><li><strong>Generative:</strong> semi-structured interviews, surveys, digital journals, focus groups and sister circles (a research method grounded in Black women's dialogue).</li><li><strong>Design:</strong> co-design and participatory design workshops, speculative design, storyboarding and user stories.</li><li><strong>Evaluative:</strong> usability testing and evaluation workshops.</li><li><strong>Analysis:</strong> thematic and qualitative analysis (including the Sort &amp; Sift, Think &amp; Shift method) and literature reviews.</li></ul>She also holds CITI Human Subjects Protection and HIPAA certifications.",
+      "answer": "Niah's research toolkit:<ul><li><strong>Generative:</strong> semi-structured interviews, surveys, digital journals, focus groups and sister circles (a research method grounded in Black women's dialogue).</li><li><strong>Design:</strong> co-design and participatory design workshops, speculative design, storyboarding and user stories.</li><li><strong>Evaluative:</strong> usability testing and evaluation workshops.</li><li><strong>Analysis:</strong> thematic and qualitative analysis (including the Sort &amp; Sift, Think &amp; Shift method) and literature reviews.</li></ul>She also holds CITI Human Subjects Protection and HIPAA certifications.",
       "related": [
         "codesign",
         "data",
@@ -153,7 +160,7 @@
         "stakeholder"
       ],
       "lead": "She gathers people in a circle, and wisdom flows.",
-      "answer": "Shaniah designs workshops so participants lead with their own knowledge. In her menopause study, women worked through realistic narratives of barriers to care and generated interventions for each one; her team then turned those into four app concepts. In DABW, she ran sister-circle design sessions where participants defined a problem from their own life, wrote user stories, sketched and built a prototype. She adapts activities for novice to intermediate skill levels and shares power on purpose, so facilitators sit beside participants, not in front of them.",
+      "answer": "Niah designs workshops so participants lead with their own knowledge. In her menopause study, women worked through realistic narratives of barriers to care and generated interventions for each one; her team then turned those into four app concepts. In DABW, she ran sister-circle design sessions where participants defined a problem from their own life, wrote user stories, sketched and built a prototype. She adapts activities for novice to intermediate skill levels and shares power on purpose, so facilitators sit beside participants, not in front of them.",
       "related": [
         "menopause",
         "dabw",
@@ -178,7 +185,7 @@
         "agent"
       ],
       "lead": "Yes. She walks among the machines of thought.",
-      "answer": "Yes. Shaniah is the lead researcher on a co-design study for an AI-supported chatbot that trains OB/GYN residents in menopause care through simulated patient scenarios. She designed the baseline survey on residents' knowledge and AI use, a focus-group question bank and a two-cohort protocol: one group defines requirements and boundaries for the tool, a second tests the prototype. Earlier phases explored where LLMs genuinely help, like answering questions, translating and summarizing care. She also prototypes with AI tools like Claude Code. <a href=\"menobots.html\">Read the case study</a>.",
+      "answer": "Yes. Niah is the lead researcher on a co-design study for an AI-supported chatbot that trains OB/GYN residents in menopause care through simulated patient scenarios. She designed the baseline survey on residents' knowledge and AI use, a focus-group question bank and a two-cohort protocol: one group defines requirements and boundaries for the tool, a second tests the prototype. Earlier phases explored where LLMs genuinely help, like answering questions, translating and summarizing care. She also prototypes with AI tools like Claude Code. <a href=\"menobots.html\">Read the case study</a>.",
       "related": [
         "menopause",
         "prototype",
@@ -203,7 +210,7 @@
         "maker space"
       ],
       "lead": "A tale woven in thread and light.",
-      "answer": "Designing the AfroVerse (DABW) is a year-long study Shaniah co-led: a pop-up makerspace where Black women in computing used e-textiles, a Cricut, an embroidery machine, a 3D printer and LilyPad Arduino to design Afrofuturist technology. She handled planning and the IRB protocol, trained facilitators on all four tools, ran sister-circle design workshops and led the qualitative analysis. Participants gained technical skills, belonging and interest in tech, and the findings became four design commitments for HCI, published at RESPECT and SIGCSE. <a href=\"dabw.html\">Read the case study</a>.",
+      "answer": "Designing the AfroVerse (DABW) is a year-long study Niah co-led: a pop-up makerspace where Black women in computing used e-textiles, a Cricut, an embroidery machine, a 3D printer and LilyPad Arduino to design Afrofuturist technology. She handled planning and the IRB protocol, trained facilitators on all four tools, ran sister-circle design workshops and led the qualitative analysis. Participants gained technical skills, belonging and interest in tech, and the findings became four design commitments for HCI, published at RESPECT and SIGCSE. <a href=\"dabw.html\">Read the case study</a>.",
       "related": [
         "publications",
         "strengths",
@@ -228,7 +235,7 @@
         "medical"
       ],
       "lead": "A quest to bring knowledge where it was missing.",
-      "answer": "It's a two-phase co-design study in Emory's CARE Lab on the menopause education gap. Phase 1: Shaniah led a workshop with women in menopause, then guided the team from their stories to four app concepts, including a bilingual app for undocumented women and an LLM-powered care-coordination app. The clear need was social support and education. Phase 2 (in progress): co-designing and evaluating an AI chatbot that trains OB/GYN residents through simulated, diverse patient scenarios. <a href=\"menobots.html\">Read the case study</a>.",
+      "answer": "It's a two-phase co-design study in Emory's CARE Lab on the menopause education gap. Phase 1: Niah led a workshop with women in menopause, then guided the team from their stories to four app concepts, including a bilingual app for undocumented women and an LLM-powered care-coordination app. The clear need was social support and education. Phase 2 (in progress): co-designing and evaluating an AI chatbot that trains OB/GYN residents through simulated, diverse patient scenarios. <a href=\"menobots.html\">Read the case study</a>.",
       "related": [
         "ai",
         "codesign",
@@ -249,7 +256,7 @@
         "students"
       ],
       "lead": "A small cube with a quiet purpose.",
-      "answer": "EduCube is an on-desk cube Shaniah designed so students in large lectures can signal confusion or questions without raising a hand. Each face has a job: emoji reactions, quick icons, a touch keypad and a light display that pulses to catch the professor's eye. She reviewed classroom feedback research, storyboarded the lecture-hall problem and built a working prototype with capacitive touch and a NeoPixel LED matrix. <a href=\"tangibletechlogs.html\">Read the case study</a>.",
+      "answer": "EduCube is an on-desk cube Niah designed so students in large lectures can signal confusion or questions without raising a hand. Each face has a job: emoji reactions, quick icons, a touch keypad and a light display that pulses to catch the professor's eye. She reviewed classroom feedback research, storyboarded the lecture-hall problem and built a working prototype with capacitive touch and a NeoPixel LED matrix. <a href=\"tangibletechlogs.html\">Read the case study</a>.",
       "related": [
         "prototype",
         "methods",
@@ -340,7 +347,7 @@
         "recruit"
       ],
       "lead": "Her path leads toward new horizons.",
-      "answer": "Shaniah is open to UX research, UI/UX design and product design roles. She's strongest where research and design meet: understanding people, defining the problem and prototyping the solution. To talk about a role, <a href=\"index.html#contact\">send her a message</a> or see her <a href=\"assets/Shaniah_Reece_Resume.pdf\" target=\"_blank\" rel=\"noopener\">resume</a>.",
+      "answer": "Niah is open to UX research, UI/UX design and product design roles. She's strongest where research and design meet: understanding people, defining the problem and prototyping the solution. To talk about a role, <a href=\"index.html#contact\">send her a message</a> or see her <a href=\"assets/Shaniah_Reece_Resume.pdf\" target=\"_blank\" rel=\"noopener\">resume</a>.",
       "related": [
         "strengths",
         "contact",
