@@ -9,7 +9,7 @@
   var AI_ENDPOINT = ''; // e.g. 'https://ask-shaniah.<your-subdomain>.workers.dev'
 
   var KB_URL = 'assistant/knowledge.json';
-  var kb = null, history = [], busy = false, moodTimer = null;
+  var kb = null, history = [], busy = false, moodTimer = null, currentMood = 'idle';
 
   // ---------- Build the widget ----------
   var launcher = el('button', { class: 'ask-launcher', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'ask-panel' });
@@ -20,6 +20,7 @@
     '<header class="ask-head">' +
       '<span class="ask-avatar">' + window.sapphireSVG(52) + '</span>' +
       '<div><strong>Sapphire</strong><span class="ask-sub">Celestial guide to Niah\'s work</span></div>' +
+      '<button type="button" class="ask-sound" aria-label="Sound effects" aria-pressed="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path class="w1" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="w2" d="M18.5 5.5a9 9 0 0 1 0 13"/><path class="x" d="M16 9l6 6M22 9l-6 6"/></svg></button>' +
       '<button type="button" class="ask-close" aria-label="Close">&times;</button>' +
     '</header>' +
     '<div class="ask-log" aria-live="polite"></div>' +
@@ -38,10 +39,26 @@
 
   launcher.addEventListener('click', function () { panel.hidden ? open() : close(); });
   panel.querySelector('.ask-close').addEventListener('click', close);
+  var soundBtn = panel.querySelector('.ask-sound');
+  function sound(name) { if (window.sapphireSound) window.sapphireSound(name); }
+  function syncSoundBtn() {
+    var on = !(window.sapphireSound && window.sapphireSound.muted);
+    soundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    soundBtn.title = on ? 'Mute Sapphire' : 'Unmute Sapphire';
+  }
+  syncSoundBtn();
+  soundBtn.addEventListener('click', function () {
+    if (!window.sapphireSound) return;
+    window.sapphireSound.muted = !window.sapphireSound.muted;
+    syncSoundBtn();
+    sound('happy');
+  });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) close(); });
   // Sapphire reacts: she leans in while you type, then thinks, then shows how it went.
   function mood(m, ms) {
     clearTimeout(moodTimer);
+    if (m !== currentMood && m !== 'idle') sound(m);
+    currentMood = m;
     if (window.sapphireMood) window.sapphireMood(m);
     if (ms) moodTimer = setTimeout(function () { mood(input.value.trim() && document.activeElement === input ? 'listening' : 'idle'); }, ms);
   }
@@ -62,6 +79,7 @@
     panel.hidden = false;
     launcher.setAttribute('aria-expanded', 'true');
     launcher.classList.add('is-open');
+    sound('open');
     load().then(function () {
       if (!log.children.length) {
         bot(kb.greeting);
@@ -72,6 +90,7 @@
   }
   function close() {
     panel.hidden = true;
+    sound('close');
     launcher.setAttribute('aria-expanded', 'false');
     launcher.classList.remove('is-open');
     launcher.focus();

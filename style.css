@@ -399,7 +399,12 @@ p { max-width: var(--measure); }
 .ask-head strong { font-family: var(--display); font-size: 1.05rem; color: #fff; }
 .ask-sub { font-size: .8rem; color: var(--on-dark-muted); }
 .ask-close { width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: var(--on-dark); font-size: 1.6rem; line-height: 1; cursor: pointer; }
-.ask-close:hover { background: var(--plum); }
+.ask-close:hover, .ask-sound:hover { background: var(--plum); }
+.ask-sound { width: 36px; height: 36px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--on-dark); cursor: pointer; }
+.ask-sound .x { display: none; }
+.ask-sound[aria-pressed="false"] .x { display: inline; }
+.ask-sound[aria-pressed="false"] .w1, .ask-sound[aria-pressed="false"] .w2 { display: none; }
+.ask-sound[aria-pressed="false"] { color: var(--on-dark-muted); }
 .ask-log { position: relative; flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; overscroll-behavior: contain; }
 .ask-msg { max-width: 88%; padding: 10px 14px; border-radius: 16px; font-size: .95rem; line-height: 1.5; overflow-wrap: anywhere; }
 .ask-bot { align-self: flex-start; background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 4px; }
