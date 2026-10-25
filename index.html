@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shaniah Reece | UX Researcher and Product Designer</title>
-  <meta name="description" content="Shaniah Reece is a UX researcher and product designer open to UI, UX or product research or design roles. Case studies in co-design, AI and physical prototyping." />
+  <meta name="description" content="Shaniah Reece is a UX researcher and product designer open to UX research, UI/UX design and product design roles. Case studies in co-design, AI and physical prototyping." />
   <meta property="og:title" content="Shaniah Reece | UX Researcher and Product Designer" />
   <meta property="og:description" content="UX research, co-design and prototyping case studies, from AI health tools to hardware." />
   <meta property="og:image" content="assets/Niah_Headshot.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=18" />
+  <link rel="stylesheet" href="style.css?v=19" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -35,7 +35,7 @@
         <h1 class="hero-name">Shaniah Reece</h1>
         <p class="hero-role">UX researcher and product designer who turns lived experience into products people trust.</p>
         <p class="lead">I'm a PhD researcher in Computer Science at Emory University. I plan studies, run co-design workshops, turn findings into design decisions and prototype the result, from AI health tools to hardware.</p>
-        <p class="open-to"><span aria-hidden="true"></span>Open to UI, UX or product research or design roles</p>
+        <p class="open-to"><span aria-hidden="true"></span>Open to UX research, UI/UX design and product design roles</p>
         <div class="hero-actions">
           <a class="btn btn-thread" href="#work">See my work</a>
           <a class="btn btn-outline" href="https://www.linkedin.com/in/shaniah-reece">LinkedIn</a>
@@ -255,7 +255,7 @@
 
         <div class="next-up">
           <div><strong>More case studies are on the way.</strong><br />Want to talk about my work in the meantime?</div>
-          <a class="btn btn-dark" href="mailto:streece@emory.edu">Email me</a>
+          <a class="btn btn-dark" href="#contact">Send me a message</a>
         </div>
       </div>
     </section>
@@ -332,13 +332,29 @@
         <circle class="led-glow" cx="450" cy="10" r="16" /><circle class="led" cx="450" cy="10" r="7" />
       </svg>
       <div class="wrap">
-        <h2 id="contact-title">Hiring for UI, UX or product research or design?</h2>
-        <p class="lead">I'd love to hear about the role. Email is the fastest way to reach me.</p>
-        <div class="hero-actions">
-          <a class="btn btn-thread" href="mailto:streece@emory.edu">streece@emory.edu</a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/shaniah-reece">LinkedIn</a>
-          <a class="btn btn-outline" href="https://github.com/reecey22">GitHub</a>
-          <a class="btn btn-outline" href="assets/Shaniah_Reece_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <div class="contact-grid">
+          <div class="contact-intro">
+            <h2 id="contact-title">Hiring a UX researcher or designer?</h2>
+            <p class="lead">I'd love to hear about the role. Send me a message and it comes straight to my inbox.</p>
+            <div class="hero-actions">
+              <a class="btn btn-outline" href="https://www.linkedin.com/in/shaniah-reece">LinkedIn</a>
+              <a class="btn btn-outline" href="https://github.com/reecey22">GitHub</a>
+              <a class="btn btn-outline" href="assets/Shaniah_Reece_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/streece@emory.edu" method="POST">
+            <input type="hidden" name="_subject" value="New message from your portfolio" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://reecey22.github.io/index.html#contact" />
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+            <label><span>Company or organization <span class="opt">(optional)</span></span><input type="text" name="company" autocomplete="organization" /></label>
+            <label>Message<textarea name="message" rows="5" required></textarea></label>
+            <button class="btn btn-thread" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
         <div class="footer">
           <span>© 2026 Shaniah Reece</span>
@@ -348,5 +364,31 @@
     </section>
 
   </main>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form || !window.fetch) return;
+      var status = form.querySelector('.form-status');
+      var button = form.querySelector('button');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        button.disabled = true; button.textContent = 'Sending…';
+        status.className = 'form-status'; status.textContent = '';
+        fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+          method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form)
+        }).then(function (r) { return r.json().then(function (d) { if (!r.ok || String(d.success) !== 'true') throw d; }); })
+          .then(function () {
+            form.reset();
+            status.className = 'form-status ok';
+            status.textContent = 'Thanks! Your message is on its way. I\'ll get back to you soon.';
+          })
+          .catch(function () {
+            status.className = 'form-status err';
+            status.textContent = 'Something went wrong. Please try again, or reach me on LinkedIn.';
+          })
+          .finally(function () { button.disabled = false; button.textContent = 'Send message'; });
+      });
+    })();
+  </script>
 </body>
 </html>
