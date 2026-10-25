@@ -32,9 +32,9 @@ Put images in `assets/` with these names. Any that are missing stay hidden.
 
 The resume lives at `assets/Shaniah_Reece_Resume.pdf` and is linked from the hero and contact buttons in `index.html`. To update it, replace that file with a new PDF of the same name.
 
-## "Ask about me" assistant
+## Sapphire, the "Ask about Shaniah" assistant
 
-The orange **Ask about me** button (bottom-right on every page) opens a chat that answers questions about Shaniah.
+Sapphire, the glittery blob in the bottom-right corner of every page, opens a chat that answers questions about Shaniah. Her look and animations live in `assistant/sapphire.js`; her voice (greeting, celestial `lead` lines, fallback) lives in `knowledge.json`.
 
 | File | What it is |
 |---|---|

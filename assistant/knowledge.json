@@ -1,7 +1,9 @@
 {
   "name": "Ask about Shaniah",
-  "greeting": "Hi! I can answer questions about Shaniah: her research strengths, what excites her, her projects and the roles she's looking for. Pick a question or type your own.",
-  "fallback": "I don't have an answer for that one yet. Shaniah would be happy to answer it herself: <a href=\"index.html#contact\">send her a message</a>.",
+  "subtitle": "Celestial guide to Shaniah's work",
+  "thinking": "Sapphire is consulting the stars…",
+  "greeting": "<span class=\"ask-lead\">✧ Greetings, seeker. I am Sapphire.</span>I have watched Shaniah's research unfold among the stars, and I know her gifts, her passions and her path. Ask, and it shall be revealed.",
+  "fallback": "<span class=\"ask-lead\">Even my celestial sight has its limits.</span>That answer rests with Shaniah herself. <a href=\"index.html#contact\">Send her a message</a> and she will reveal it.",
   "starters": [
     "strengths",
     "excites",
@@ -24,17 +26,18 @@
         "herself",
         "elevator pitch"
       ],
-      "answer": "Shaniah Reece is a UX researcher and product designer and a PhD researcher in Computer Science at Emory University. She plans studies, runs co-design workshops, turns findings into design decisions and prototypes the result, from AI health tools to wearable hardware. Her work sits where human-computer interaction, physical computing and health equity meet.",
-      "related": [
-        "strengths",
-        "excites",
-        "roles"
-      ],
       "broad": [
         "about her",
         "about shaniah",
         "about yourself",
         "about you"
+      ],
+      "lead": "Ah, you wish to know her essence.",
+      "answer": "Shaniah Reece is a UX researcher and product designer and a PhD researcher in Computer Science at Emory University. She plans studies, runs co-design workshops, turns findings into design decisions and prototypes the result, from AI health tools to wearable hardware. Her work sits where human-computer interaction, physical computing and health equity meet.",
+      "related": [
+        "strengths",
+        "excites",
+        "roles"
       ]
     },
     {
@@ -63,6 +66,7 @@
         "good fit",
         "fit for"
       ],
+      "lead": "Her gifts are clear to me.",
       "answer": "Her biggest strengths in research:<ul><li><strong>Co-design and facilitation.</strong> She designs and runs participatory and speculative workshops where the people affected define the problem, from Black women in computing to menopausal women, clinicians and OB/GYN residents.</li><li><strong>Turning qualitative data into decisions.</strong> She synthesizes interviews, surveys, journals and workshop transcripts into themes a team can act on, like the four design commitments from her DABW study.</li><li><strong>Running studies end to end.</strong> Literature review, IRB protocol, recruitment, facilitation, analysis and publication.</li><li><strong>Earning trust with hard-to-reach communities</strong>, like partnering with an online menopause community of 15,000+ members.</li><li><strong>Prototyping what she learns</strong>, from Figma screens to Arduino and e-textile builds.</li></ul>",
       "related": [
         "methods",
@@ -92,6 +96,7 @@
         "fun",
         "why does she do"
       ],
+      "lead": "I have seen what sets her spirit alight.",
       "answer": "Shaniah has been a tech nerd since her first Nintendo. What excites her most:<ul><li><strong>Making people the inventors, not the afterthought.</strong> She builds spaces where Black women get to design and build technology, not just use it.</li><li><strong>The moment craft meets code</strong>, like when a participant who sews realizes she can stitch a working circuit into a shirt.</li><li><strong>AI that closes real gaps in care</strong>, like her current work on an AI chatbot that trains OB/GYN residents in menopause care.</li><li><strong>Watching people's own stories turn into designs</strong> through co-design.</li></ul>Outside the lab she does tech consulting and advocates for wellness and for women in computing.",
       "related": [
         "dabw",
@@ -124,6 +129,7 @@
         "approach",
         "process"
       ],
+      "lead": "Her instruments of understanding are many.",
       "answer": "Shaniah's research toolkit:<ul><li><strong>Generative:</strong> semi-structured interviews, surveys, digital journals, focus groups and sister circles (a research method grounded in Black women's dialogue).</li><li><strong>Design:</strong> co-design and participatory design workshops, speculative design, storyboarding and user stories.</li><li><strong>Evaluative:</strong> usability testing and evaluation workshops.</li><li><strong>Analysis:</strong> thematic and qualitative analysis (including the Sort &amp; Sift, Think &amp; Shift method) and literature reviews.</li></ul>She also holds CITI Human Subjects Protection and HIPAA certifications.",
       "related": [
         "codesign",
@@ -146,6 +152,7 @@
         "speculative",
         "stakeholder"
       ],
+      "lead": "She gathers people in a circle, and wisdom flows.",
       "answer": "Shaniah designs workshops so participants lead with their own knowledge. In her menopause study, women worked through realistic narratives of barriers to care and generated interventions for each one; her team then turned those into four app concepts. In DABW, she ran sister-circle design sessions where participants defined a problem from their own life, wrote user stories, sketched and built a prototype. She adapts activities for novice to intermediate skill levels and shares power on purpose, so facilitators sit beside participants, not in front of them.",
       "related": [
         "menopause",
@@ -170,6 +177,7 @@
         "genai",
         "agent"
       ],
+      "lead": "Yes. She walks among the machines of thought.",
       "answer": "Yes. Shaniah is the lead researcher on a co-design study for an AI-supported chatbot that trains OB/GYN residents in menopause care through simulated patient scenarios. She designed the baseline survey on residents' knowledge and AI use, a focus-group question bank and a two-cohort protocol: one group defines requirements and boundaries for the tool, a second tests the prototype. Earlier phases explored where LLMs genuinely help, like answering questions, translating and summarizing care. She also prototypes with AI tools like Claude Code. <a href=\"menobots.html\">Read the case study</a>.",
       "related": [
         "menopause",
@@ -194,6 +202,7 @@
         "sister circle",
         "maker space"
       ],
+      "lead": "A tale woven in thread and light.",
       "answer": "Designing the AfroVerse (DABW) is a year-long study Shaniah co-led: a pop-up makerspace where Black women in computing used e-textiles, a Cricut, an embroidery machine, a 3D printer and LilyPad Arduino to design Afrofuturist technology. She handled planning and the IRB protocol, trained facilitators on all four tools, ran sister-circle design workshops and led the qualitative analysis. Participants gained technical skills, belonging and interest in tech, and the findings became four design commitments for HCI, published at RESPECT and SIGCSE. <a href=\"dabw.html\">Read the case study</a>.",
       "related": [
         "publications",
@@ -218,6 +227,7 @@
         "healthcare",
         "medical"
       ],
+      "lead": "A quest to bring knowledge where it was missing.",
       "answer": "It's a two-phase co-design study in Emory's CARE Lab on the menopause education gap. Phase 1: Shaniah led a workshop with women in menopause, then guided the team from their stories to four app concepts, including a bilingual app for undocumented women and an LLM-powered care-coordination app. The clear need was social support and education. Phase 2 (in progress): co-designing and evaluating an AI chatbot that trains OB/GYN residents through simulated, diverse patient scenarios. <a href=\"menobots.html\">Read the case study</a>.",
       "related": [
         "ai",
@@ -238,6 +248,7 @@
         "classroom",
         "students"
       ],
+      "lead": "A small cube with a quiet purpose.",
       "answer": "EduCube is an on-desk cube Shaniah designed so students in large lectures can signal confusion or questions without raising a hand. Each face has a job: emoji reactions, quick icons, a touch keypad and a light display that pulses to catch the professor's eye. She reviewed classroom feedback research, storyboarded the lecture-hall problem and built a working prototype with capacitive touch and a NeoPixel LED matrix. <a href=\"tangibletechlogs.html\">Read the case study</a>.",
       "related": [
         "prototype",
@@ -267,6 +278,7 @@
         "design skills",
         "ui"
       ],
+      "lead": "From her hands, ideas take form.",
       "answer": "For screens: Figma, wireframing, storyboarding and mobile app prototypes, plus AI-assisted prototyping with Claude Code. For physical prototypes: LilyPad Arduino, e-textiles, 3D printing, laser cutting, Cricut and embroidery machines. For collaboration: Miro, Canva, Notion and GitHub.",
       "related": [
         "educube",
@@ -297,6 +309,7 @@
         "forecast",
         "covid"
       ],
+      "lead": "The numbers speak to her, too.",
       "answer": "Yes. She works with Python, R, SQL and Tableau for data analysis and also programs in Java, HTML, CSS, PHP and C++. As an intern at the National Center for Atmospheric Research (NCAR), she improved COVID-19 forecasts by applying ensemble data assimilation to an epidemiological model, using data from 4 countries, and presented the results to technical and academic audiences.",
       "related": [
         "methods",
@@ -326,6 +339,7 @@
         "work with",
         "recruit"
       ],
+      "lead": "Her path leads toward new horizons.",
       "answer": "Shaniah is open to UX research, UI/UX design and product design roles. She's strongest where research and design meet: understanding people, defining the problem and prototyping the solution. To talk about a role, <a href=\"index.html#contact\">send her a message</a> or see her <a href=\"assets/Shaniah_Reece_Resume.pdf\" target=\"_blank\" rel=\"noopener\">resume</a>.",
       "related": [
         "strengths",
@@ -353,6 +367,7 @@
         "study",
         "studied"
       ],
+      "lead": "Her scholarly journey, as written in the stars:",
       "answer": "<ul><li>PhD in Computer Science, Emory University (in progress, since 2023)</li><li>Master's in Computer Science, Emory University (expected December 2026)</li><li>B.S. in Information Systems, University of Maryland, Baltimore County (2023)</li></ul>",
       "related": [
         "roles",
@@ -377,6 +392,7 @@
         "conference",
         "journal article"
       ],
+      "lead": "Her words are inscribed in the archives.",
       "answer": "Yes, four so far:<ul><li><em>Stitching Resistance: Turning a Makerspace into a Counterspace for Black Women</em>, SIGCSE 2027 (first author, to appear)</li><li><em>Creating Counterspaces for Black Women in Computing</em>, RESPECT 2026</li><li><em>Designing the AfroVerse for Black Women in Computing</em>, RESPECT 2025 (sole author)</li><li><em>A Powerful Sisterhood: Black Women Scholars in Feminist HCI</em>, ACM Interactions 2025 (first author)</li></ul><a href=\"index.html#publications\">See all publications</a>.",
       "related": [
         "dabw",
@@ -405,6 +421,7 @@
         "stakeholders",
         "interdisciplinary"
       ],
+      "lead": "She guides others, as I guide you.",
       "answer": "Plenty. She trained 6 researchers in design thinking from concept to a user-tested prototype, mentors undergraduate research assistants, and partners with clinicians, public health specialists and computer scientists to run studies end to end. She has taught in Foundations in HCI, Research Methods in HCI and Computing, AI, Ethics and Society at Emory. She also served as Secretary of Emory's Laney Graduate Student Council, a CS Ambassador and President of UMBC's CWIT Student Council.",
       "related": [
         "strengths",
@@ -425,6 +442,7 @@
         "scholar",
         "recognition"
       ],
+      "lead": "The heavens have honored her.",
       "answer": "Her honors include the Women in Natural Science Fellowship (2023), Grace Hopper Conference Scholar (2022), Tapia Conference Scholar (2021) and a Lockheed Martin Scholarship (2019).",
       "related": [
         "leadership",
@@ -453,6 +471,7 @@
         "where does she live",
         "based"
       ],
+      "lead": "Beyond the lab, her light still shines.",
       "answer": "She's been a tech nerd since her first Nintendo. She's from Beltsville, Maryland, and is now at Emory in Atlanta. Outside the lab she does tech consulting and advocates for wellness and for women in computing.",
       "related": [
         "excites",
@@ -479,6 +498,7 @@
         "call",
         "interview her"
       ],
+      "lead": "The path to her is open.",
       "answer": "The fastest way is the <a href=\"index.html#contact\">contact form</a>, which goes straight to her inbox. You can also find her on <a href=\"https://www.linkedin.com/in/shaniah-reece\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> or download her <a href=\"assets/Shaniah_Reece_Resume.pdf\" target=\"_blank\" rel=\"noopener\">resume</a>.",
       "related": [
         "roles",

@@ -385,13 +385,16 @@ p { max-width: var(--measure); }
 
 /* "Ask about Shaniah" assistant */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-.ask-launcher { position: fixed; right: 20px; bottom: 20px; z-index: 40; display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px 13px 16px; border: 0; border-radius: 999px; background: var(--marigold); color: var(--night); font: 600 1rem var(--body); cursor: pointer; box-shadow: 0 10px 30px rgba(18,26,54,.35); transition: background .2s, transform .2s; }
-.ask-launcher:hover { background: var(--amber); transform: translateY(-2px); }
-.ask-launcher.is-open { background: var(--night); color: #fff; }
-.ask-panel { position: fixed; right: 20px; bottom: 86px; z-index: 40; width: min(390px, calc(100vw - 32px)); height: min(580px, calc(100vh - 120px)); display: flex; flex-direction: column; background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; box-shadow: 0 24px 60px rgba(18,26,54,.35); }
+.ask-launcher { position: fixed; right: 18px; bottom: 14px; z-index: 40; display: inline-flex; align-items: center; gap: 2px; padding: 0; border: 0; background: none; cursor: pointer; color: var(--night); }
+.ask-launcher-blob { display: block; width: 76px; height: 76px; filter: drop-shadow(0 8px 16px rgba(18,26,54,.35)); transition: transform .25s; }
+.ask-launcher-label { order: -1; display: grid; text-align: right; padding: 9px 14px; border-radius: 16px 16px 4px 16px; background: #fff; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(18,26,54,.18); font: 600 .95rem/1.2 var(--body); }
+.ask-launcher-label small { font-weight: 500; font-size: .78rem; color: var(--muted); }
+.ask-launcher:hover .ask-launcher-blob { transform: scale(1.08) rotate(-3deg); }
+.ask-launcher.is-open .ask-launcher-label { display: none; }
+.ask-panel { position: fixed; right: 20px; bottom: 100px; z-index: 40; width: min(390px, calc(100vw - 32px)); height: min(580px, calc(100vh - 120px)); display: flex; flex-direction: column; background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; box-shadow: 0 24px 60px rgba(18,26,54,.35); }
 .ask-panel[hidden] { display: none; }
-.ask-head { display: flex; align-items: center; gap: 12px; padding: 14px 14px 14px 16px; background: var(--night); color: var(--on-dark); }
-.ask-head img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid var(--marigold); }
+.ask-head { display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 16px; background: radial-gradient(120% 140% at 0% 0%, #2B3590 0%, var(--night) 60%); color: var(--on-dark); }
+.ask-avatar { width: 52px; height: 52px; margin: -6px -2px -6px -6px; flex: none; }
 .ask-head div { flex: 1; min-width: 0; display: grid; }
 .ask-head strong { font-family: var(--display); font-size: 1.05rem; color: #fff; }
 .ask-sub { font-size: .8rem; color: var(--on-dark-muted); }
@@ -407,8 +410,9 @@ p { max-width: var(--measure); }
 .ask-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
 .ask-chip { padding: 8px 12px; border: 1.5px solid var(--violet); border-radius: 999px; background: transparent; color: var(--violet-ink); font: 500 .88rem var(--body); text-align: left; cursor: pointer; }
 .ask-chip:hover { background: var(--lilac); }
-.ask-typing { display: inline-flex; gap: 4px; padding: 4px 0; }
-.ask-typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--violet); animation: ask-dot 1s infinite ease-in-out; }
+.ask-typing { display: inline-flex; align-items: center; gap: 4px; padding: 4px 0; }
+.ask-typing em { margin-left: 6px; font-size: .88rem; color: var(--muted); }
+.ask-typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--amber); animation: ask-dot 1s infinite ease-in-out; }
 .ask-typing i:nth-child(2) { animation-delay: .15s; }
 .ask-typing i:nth-child(3) { animation-delay: .3s; }
 @keyframes ask-dot { 0%, 80%, 100% { opacity: .3; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
@@ -418,8 +422,32 @@ p { max-width: var(--measure); }
 .ask-form button { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--marigold); color: var(--night); cursor: pointer; }
 .ask-form button:hover { background: var(--amber); }
 @media (max-width: 600px) {
-  .ask-launcher { right: 16px; bottom: 16px; }
+  .ask-launcher { right: 10px; bottom: 8px; }
+  .ask-launcher-blob { width: 64px; height: 64px; }
+  .ask-launcher-blob svg { width: 64px; height: 64px; }
   .ask-panel { right: 0; left: 0; bottom: 0; width: 100%; height: 85vh; height: 85dvh; border-radius: 22px 22px 0 0; }
   .ask-panel:not([hidden]) ~ .ask-launcher, .ask-launcher.is-open { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { .ask-typing i { animation: none; } .ask-launcher { transition: none; } }
+.ask-lead { display: block; margin-bottom: 6px; font-family: var(--display); font-style: italic; font-weight: 500; color: var(--violet-ink); }
+.ask-bot { box-shadow: 0 2px 12px rgba(91,99,214,.08); }
+
+/* Sapphire's little life: floating, blinking, glittering */
+.sapphire { overflow: visible; display: block; }
+.sapphire .sph-float { animation: sph-float 4s ease-in-out infinite; }
+.sapphire .sph-body { transform-origin: 60px 106px; animation: sph-squish 4s ease-in-out infinite; }
+.sapphire .sph-eyes { transform-box: fill-box; transform-origin: center; animation: sph-blink 5s infinite; }
+.sapphire .sph-halo { animation: sph-halo 4s ease-in-out infinite; }
+.sapphire .sph-aura { animation: sph-aura 4s ease-in-out infinite; }
+.sapphire .sph-sparkles path, .sapphire .sph-glitter path { transform-box: fill-box; transform-origin: center; animation: sph-twinkle 2.4s ease-in-out infinite; }
+.sapphire .sk2, .sapphire .gl2 { animation-delay: .8s !important; }
+.sapphire .sk3, .sapphire .gl3 { animation-delay: 1.6s !important; }
+@keyframes sph-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes sph-squish { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.03, .97); } }
+@keyframes sph-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+@keyframes sph-halo { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-2px); opacity: .8; } }
+@keyframes sph-aura { 0%, 100% { opacity: .6; } 50% { opacity: 1; } }
+@keyframes sph-twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(.4) rotate(45deg); opacity: .35; } }
+@media (prefers-reduced-motion: reduce) {
+  .ask-typing i, .sapphire * { animation: none !important; }
+  .ask-launcher-blob { transition: none; }
+}

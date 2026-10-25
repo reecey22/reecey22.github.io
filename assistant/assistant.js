@@ -1,5 +1,5 @@
 /*
-  "Ask about Shaniah" assistant.
+  Sapphire, the "Ask about Shaniah" assistant (her look lives in sapphire.js).
 
   Today it answers from assistant/knowledge.json with keyword matching (no AI, no cost).
   To switch on live AI later: deploy assistant/worker.js (see README) and paste its URL
@@ -13,13 +13,13 @@
 
   // ---------- Build the widget ----------
   var launcher = el('button', { class: 'ask-launcher', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'ask-panel' });
-  launcher.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1v.5"/><circle cx="12" cy="16.6" r=".6" fill="currentColor"/></svg><span>Ask about me</span>';
+  launcher.innerHTML = '<span class="ask-launcher-blob">' + window.sapphireSVG(76) + '</span><span class="ask-launcher-label">Ask Sapphire<small>about Shaniah</small></span>';
 
-  var panel = el('section', { class: 'ask-panel', id: 'ask-panel', role: 'dialog', 'aria-label': 'Ask about Shaniah', hidden: '' });
+  var panel = el('section', { class: 'ask-panel', id: 'ask-panel', role: 'dialog', 'aria-label': 'Ask Sapphire about Shaniah', hidden: '' });
   panel.innerHTML =
     '<header class="ask-head">' +
-      '<img src="assets/Niah_Headshot.png" alt="" width="36" height="36" />' +
-      '<div><strong>Ask about Shaniah</strong><span class="ask-sub">' + (AI_ENDPOINT ? 'AI assistant, answers from her profile' : 'Quick answers, written with Shaniah') + '</span></div>' +
+      '<span class="ask-avatar">' + window.sapphireSVG(52) + '</span>' +
+      '<div><strong>Sapphire</strong><span class="ask-sub">Celestial guide to Shaniah\'s work</span></div>' +
       '<button type="button" class="ask-close" aria-label="Close">&times;</button>' +
     '</header>' +
     '<div class="ask-log" aria-live="polite"></div>' +
@@ -82,10 +82,10 @@
     clearChips();
     user(q);
     busy = true;
-    var typing = bot('<span class="ask-typing"><i></i><i></i><i></i></span>');
+    var typing = bot('<span class="ask-typing"><i></i><i></i><i></i><em>' + (kb.thinking || 'Thinking…') + '</em></span>');
     var scripted = match(q), answerEl;
 
-    var reply = AI_ENDPOINT ? askAI(q).catch(function () { return null; }) : delay(450).then(function () { return null; });
+    var reply = AI_ENDPOINT ? askAI(q).catch(function () { return null; }) : delay(900).then(function () { return null; });
     reply.then(function (aiText) {
       typing.remove();
       if (aiText) {
@@ -96,7 +96,7 @@
         history = history.slice(-8);
         chips(scripted ? scripted.related : kb.starters);
       } else if (scripted) {
-        answerEl = bot(scripted.answer);
+        answerEl = bot((scripted.lead ? '<span class="ask-lead">' + scripted.lead + '</span>' : '') + scripted.answer);
         chips(scripted.related);
       } else {
         answerEl = bot(kb.fallback);
