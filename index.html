@@ -381,12 +381,13 @@
             form.reset();
             status.className = 'form-status ok';
             status.textContent = 'Thanks! Your message is on its way. I\'ll get back to you soon.';
+            button.disabled = false; button.textContent = 'Send message';
           })
           .catch(function () {
-            status.className = 'form-status err';
-            status.textContent = 'Something went wrong. Please try again, or reach me on LinkedIn.';
-          })
-          .finally(function () { button.disabled = false; button.textContent = 'Send message'; });
+            // Quick send didn't work: send the regular way instead, so the message is never lost.
+            status.textContent = 'Sending…';
+            form.submit();
+          });
       });
     })();
   </script>
