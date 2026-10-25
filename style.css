@@ -352,7 +352,7 @@ p { max-width: var(--measure); }
 .persona-note { margin-top: 16px; padding: 12px 16px; border-left: 3px solid var(--violet); background: #fff; border-radius: 0 12px 12px 0; font-size: .95rem; color: var(--muted); }
 
 /* ---------- Publications ---------- */
-.pubs-section { background: #fff; }
+.about { background: #fff; }
 .pubs { list-style: none; border-top: 2px solid var(--ink); }
 .pubs > li { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
 .pub-year { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: var(--violet-ink); line-height: 1.3; }
