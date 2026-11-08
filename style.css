@@ -365,6 +365,9 @@ p { max-width: var(--measure); }
 .pub-venue { margin-top: 4px; color: var(--muted); font-size: .95rem; font-style: italic; }
 .pub-tag { display: inline-block; margin-top: 12px; font-size: .85rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: var(--lilac); color: var(--violet-ink); text-decoration: none; }
 .pub-tag:hover { background: var(--violet); color: #fff; }
+.pubs-cat { margin: 44px 0 14px; font-size: .85rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--violet-ink); }
+.section-intro + .pubs-cat { margin-top: 8px; }
+.pub-award { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 8px; font-size: .82rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: var(--marigold); color: var(--night); }
 @media (max-width: 600px) { .pubs > li { grid-template-columns: 1fr; gap: 6px; } }
 
 /* Contact form */

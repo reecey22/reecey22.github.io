@@ -396,13 +396,14 @@
         "respect",
         "interactions",
         "cscw",
+        "best paper",
         "workshop paper",
         "acm",
         "conference",
         "journal article"
       ],
       "lead": "Her words are inscribed in the archives.",
-      "answer": "Yes, five so far:<ul><li><em>Stitching Resistance: Turning a Makerspace into a Counterspace for Black Women</em>, SIGCSE 2027 (first author, to appear)</li><li><em>Co-designing Care Infrastructure for Menopause</em>, Women’s Health as Cooperative Work workshop at CSCW 2026 (first author)</li><li><em>Creating Counterspaces for Black Women in Computing</em>, RESPECT 2026</li><li><em>Designing the AfroVerse for Black Women in Computing</em>, RESPECT 2025 (sole author)</li><li><em>A Powerful Sisterhood: Black Women Scholars in Feminist HCI</em>, ACM Interactions 2025 (first author)</li></ul><a href=\"index.html#publications\">See all publications</a>.",
+      "answer": "Yes. <strong>Conference papers:</strong><ul><li><em>Stitching Resistance: Turning a Makerspace into a Counterspace for Black Women</em>, SIGCSE 2027 (first author, to appear)</li><li><em>Creating Counterspaces for Black Women in Computing</em>, RESPECT 2026 (★ Best Paper Award)</li></ul><strong>Magazine article:</strong><ul><li><em>A Powerful Sisterhood: Black Women Scholars in Feminist HCI</em>, ACM Interactions 2025 (first author)</li></ul><strong>Workshop &amp; doctoral consortium papers:</strong><ul><li><em>Co-designing Care Infrastructure for Menopause</em>, CSCW 2026 workshop (first author)</li><li><em>Designing the AfroVerse for Black Women in Computing</em>, RESPECT 2025 Doctoral Consortium (sole author)</li></ul><a href=\"index.html#publications\">See all publications</a>.",
       "related": [
         "dabw",
         "education",
@@ -449,10 +450,11 @@
         "scholarship",
         "fellowship",
         "scholar",
-        "recognition"
+        "recognition",
+        "best paper"
       ],
       "lead": "The heavens have honored her.",
-      "answer": "Her honors include the Women in Natural Science Fellowship (2023), Grace Hopper Conference Scholar (2022), Tapia Conference Scholar (2021) and a Lockheed Martin Scholarship (2019).",
+      "answer": "Her honors include a Best Paper Award at RESPECT 2026 for <em>Creating Counterspaces for Black Women in Computing</em>, the Women in Natural Science Fellowship (2023), Grace Hopper Conference Scholar (2022), Tapia Conference Scholar (2021) and a Lockheed Martin Scholarship (2019).",
       "related": [
         "leadership",
         "publications",
