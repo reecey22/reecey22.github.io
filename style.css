@@ -327,6 +327,11 @@ p { max-width: var(--measure); }
 .code .k { color: var(--amber); }
 
 /* ---------- Hiring-focused additions ---------- */
+.hero-cred { margin-top: 18px; color: var(--on-dark); font-size: .98rem; }
+.hero-cred a { color: var(--on-dark); text-decoration: underline; text-decoration-color: var(--marigold); text-underline-offset: 3px; }
+.hero-cred a:hover { color: #fff; }
+.hero-cred .star { color: var(--amber); }
+.feature-paper { display: block; width: fit-content; margin-top: 14px; padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(255,193,90,.45); color: var(--amber) !important; font-size: .85rem; font-weight: 600; }
 .open-to { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 8px 16px; border-radius: 999px; background: rgba(234,238,255,.08); border: 1px solid rgba(234,238,255,.18); font-size: .95rem; font-weight: 500; color: var(--on-dark); max-width: none; }
 .open-to span { width: 9px; height: 9px; border-radius: 50%; background: #3BB273; box-shadow: 0 0 0 4px rgba(59,178,115,.22); flex: none; }
 
