@@ -16,7 +16,7 @@
   --ink: #161D38;
   --muted: #545C7A;
   --on-dark: #EAEEFF;
-  --on-dark-muted: #A9B3D6;
+  --on-dark-muted: #BCC4E4;
   --line: #D9DFF5;
 
   --display: "Bricolage Grotesque", system-ui, sans-serif;
@@ -67,6 +67,7 @@ p { max-width: var(--measure); }
 .nav ul { list-style: none; display: flex; gap: clamp(14px, 3vw, 32px); }
 .nav ul a { text-decoration: none; font-size: .95rem; font-weight: 500; color: var(--on-dark-muted); padding: 6px 0; border-bottom: 2px solid transparent; }
 .nav ul a:hover, .nav ul a[aria-current="page"] { color: #fff; border-color: var(--marigold); }
+@media (max-width: 440px) { .nav-name { font-size: 1.35rem; } .nav ul { gap: 12px; } .nav ul a { font-size: .85rem; } }
 
 /* ---------- Buttons ---------- */
 .btn {

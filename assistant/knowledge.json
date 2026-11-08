@@ -74,7 +74,7 @@
         "fit for"
       ],
       "lead": "Her gifts are clear to me.",
-      "answer": "Her biggest strengths in research:<ul><li><strong>Co-design and facilitation.</strong> She designs and runs participatory and speculative workshops where the people affected define the problem, from Black women in computing to menopausal women, clinicians and OB/GYN residents.</li><li><strong>Turning qualitative data into decisions.</strong> She synthesizes interviews, surveys, journals and workshop transcripts into themes a team can act on, like the four design commitments from her DABW study.</li><li><strong>Running studies end to end.</strong> Literature review, IRB protocol, recruitment, facilitation, analysis and publication.</li><li><strong>Earning trust with hard-to-reach communities</strong>, like partnering with an online menopause community of 15,000+ members.</li><li><strong>Prototyping what she learns</strong>, from Figma screens to Arduino and e-textile builds.</li></ul>",
+      "answer": "Her biggest strengths in research:<ul><li><strong>Co-design and facilitation.</strong> She designs and runs participatory and speculative workshops where the people affected define the problem, from Black women in computing to menopausal women, clinicians and OB/GYN residents.</li><li><strong>Turning qualitative data into decisions.</strong> She synthesizes interviews, surveys, journals and workshop transcripts into themes a team can act on, like the four design principles from her DABW study.</li><li><strong>Running studies end to end.</strong> Literature review, IRB protocol, recruitment, facilitation, analysis and publication.</li><li><strong>Earning trust with hard-to-reach communities</strong>, like partnering with an online menopause community of 15,000+ members.</li><li><strong>Prototyping what she learns</strong>, from Figma screens to Arduino and e-textile builds.</li></ul>",
       "related": [
         "methods",
         "codesign",
@@ -210,7 +210,7 @@
         "maker space"
       ],
       "lead": "A tale woven in thread and light.",
-      "answer": "Designing the AfroVerse (DABW) is a year-long study Niah co-led: a pop-up makerspace where Black women in computing used e-textiles, a Cricut, an embroidery machine, a 3D printer and LilyPad Arduino to design Afrofuturist technology. She handled planning and the IRB protocol, trained facilitators on all four tools, ran sister-circle design workshops and led the qualitative analysis. Participants gained technical skills, belonging and interest in tech, and the findings became four design commitments for HCI, published at RESPECT and SIGCSE. <a href=\"dabw.html\">Read the case study</a>.",
+      "answer": "Designing the AfroVerse (DABW) is a year-long study Niah co-led: a pop-up makerspace where Black women in computing used e-textiles, a Cricut, an embroidery machine, a 3D printer and LilyPad Arduino to design Afrofuturist technology. She handled planning and the IRB protocol, trained facilitators on all four tools, ran sister-circle design workshops and led the qualitative analysis. Participants gained technical skills, belonging and interest in tech, no one abandoned her project, and the findings became four design principles for inclusive tech spaces, accepted at SIGCSE 2027. <a href=\"dabw.html\">Read the case study</a>.",
       "related": [
         "publications",
         "strengths",
