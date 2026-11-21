@@ -264,6 +264,30 @@
       ]
     },
     {
+      "id": "tactile",
+      "question": "What is her tactile map project?",
+      "keywords": [
+        "tactile",
+        "tactile map",
+        "low vision",
+        "low-vision",
+        "blind",
+        "accessibility",
+        "accessible",
+        "data visualization",
+        "multimodal",
+        "embi",
+        "cav"
+      ],
+      "lead": "Data you can reach out and touch.",
+      "answer": "In Emory's EMBI and CAV Labs, Niah compared a tactile map with multimodal input to see which helped low-vision users read data visualizations. She found that people with similar access needs had very different experiences, so she now starts from what users tell her instead of her own assumptions.",
+      "related": [
+        "educube",
+        "prototype",
+        "methods"
+      ]
+    },
+    {
       "id": "prototype",
       "question": "What design and prototyping tools does she use?",
       "keywords": [

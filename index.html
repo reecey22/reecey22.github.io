@@ -196,6 +196,55 @@
           </div>
         </a>
 
+        <div class="feature">
+          <div class="feature-art">
+            <!-- Optional: add assets/tactile-cover.jpg (a photo of the tactile map works well) and it replaces the illustration -->
+            <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <radialGradient id="dusk-tactile" cx="50%" cy="50%" r="60%">
+                  <stop offset="0" stop-color="#5B63D6" stop-opacity=".7" />
+                  <stop offset="1" stop-color="#1E2A4F" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <rect width="600" height="420" fill="#1E2A4F" />
+              <circle cx="300" cy="210" r="240" fill="url(#dusk-tactile)" />
+              <g fill="#EAEEFF" opacity=".5">
+                <circle cx="60" cy="60" r="1.6" /><circle cx="550" cy="70" r="1.4" /><circle cx="530" cy="370" r="1.6" /><circle cx="70" cy="350" r="1.2" />
+              </g>
+              <!-- the tactile board -->
+              <rect x="150" y="90" width="230" height="250" rx="22" fill="#DEE2FF" />
+              <!-- a bar chart made of raised dots -->
+              <g fill="#5B63D6">
+                <circle cx="180" cy="300" r="9" /><circle cx="180" cy="272" r="9" />
+                <circle cx="220" cy="300" r="9" /><circle cx="220" cy="272" r="9" /><circle cx="220" cy="244" r="9" /><circle cx="220" cy="216" r="9" />
+                <circle cx="260" cy="300" r="9" /><circle cx="260" cy="272" r="9" /><circle cx="260" cy="244" r="9" />
+                <circle cx="300" cy="300" r="9" /><circle cx="300" cy="272" r="9" /><circle cx="300" cy="244" r="9" /><circle cx="300" cy="216" r="9" /><circle cx="300" cy="188" r="9" /><circle cx="300" cy="160" r="9" />
+                <circle cx="340" cy="300" r="9" /><circle cx="340" cy="272" r="9" /><circle cx="340" cy="244" r="9" /><circle cx="340" cy="216" r="9" />
+              </g>
+              <rect x="166" y="318" width="188" height="4" rx="2" fill="#5B63D6" opacity=".55" />
+              <!-- a second way in: sound -->
+              <path class="stitch" d="M380 200 C 395 200, 400 214, 412 214" />
+              <g fill="none" stroke="#DEE2FF" stroke-width="5" stroke-linecap="round" opacity=".85">
+                <path d="M424 196 a 24 24 0 0 1 0 36" />
+                <path d="M440 182 a 42 42 0 0 1 0 64" />
+              </g>
+              <circle class="led-glow" cx="300" cy="160" r="18" /><circle class="led" cx="300" cy="160" r="8" />
+            </svg>
+            <img src="assets/tactile-cover.jpg" alt="" onerror="this.remove()" />
+          </div>
+          <div class="feature-body">
+            <span class="feature-kicker">Accessibility research</span>
+            <h3>Feeling the Data: Tactile Maps for Low-Vision Users</h3>
+            <p>Most charts and graphs are built for people who can see them clearly. I compared a tactile map with multimodal input to see which helped low-vision users read data visualizations, and how their experiences differed.</p>
+            <dl class="feature-facts">
+              <div><dt>Labs</dt><dd>EMBI and CAV Labs, Emory University</dd></div>
+              <div><dt>Focus</dt><dd>Accessible data visualization</dd></div>
+              <div><dt>Methods</dt><dd>Comparative evaluation with low-vision users</dd></div>
+              <div><dt>Outcome</dt><dd>People with similar access needs had very different experiences, which points to designs that let each person choose how to explore data.</dd></div>
+            </dl>
+          </div>
+        </div>
+
         <div class="next-up">
           <div><strong>More case studies are on the way.</strong><br />Want to talk about my work in the meantime?</div>
           <a class="btn btn-dark" href="#contact">Send me a message</a>
