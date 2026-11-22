@@ -10,6 +10,7 @@ UX research and HCI design portfolio. Purple and orange palette drawn from the D
 |---|---|
 | `index.html` | Home page: intro, how I work, selected work, about, contact |
 | `dabw.html` | Case study: Designing the AfroVerse with Black Women in Computing |
+| `academic-projects.html` | Academic projects: Encodings study and The FINal Straw VR game |
 | `style.css` | Shared styles for every page |
 | `assets/Niah_Headshot.png` | Hero portrait |
 
