@@ -288,6 +288,34 @@
       ]
     },
     {
+      "id": "academic",
+      "question": "What academic projects has she done?",
+      "keywords": [
+        "academic",
+        "academic projects",
+        "class project",
+        "course project",
+        "encodings",
+        "enhanced table",
+        "tables",
+        "vysical",
+        "goldfish",
+        "vr",
+        "virtual reality",
+        "game",
+        "a-frame",
+        "fin-al straw",
+        "final straw"
+      ],
+      "lead": "From data tables to fishbowls.",
+      "answer": "Two academic projects are on her <a href=\"academic-projects.html\">Academic projects page</a>:<ul><li><strong>Encodings (Summer 2023):</strong> a study building on <em>Let's Get Vysical</em> that tested visual encodings, plain tables and enhanced tables as ways to read data. Niah redesigned the enhanced tables after finding them far too complex to navigate, ran the study and led recruitment of blind and visually impaired participants. Their feedback showed the table-based approach wasn't very beneficial to them.</li><li><strong>The FINal Straw (Spring 2024):</strong> a mobile VR game about how not to care for a goldfish, built by a four-person team in a two-week sprint. Niah wrote the interaction code: controller input, camera rotation, scene reloading and the end screens.</li></ul>",
+      "related": [
+        "tactile",
+        "methods",
+        "prototype"
+      ]
+    },
+    {
       "id": "prototype",
       "question": "What design and prototyping tools does she use?",
       "keywords": [

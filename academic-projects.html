@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Projects | Shaniah Reece</title>
+  <meta name="description" content="Academic projects by Shaniah Reece: a study of non-visual data encodings for blind and visually impaired people, and a team-built VR game." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=27" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="nav-name" href="index.html">Shaniah</a>
+      <ul>
+        <li><a href="index.html#work" aria-current="page">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="cs-hero">
+    <svg class="cs-hero-art" viewBox="0 0 520 420" aria-hidden="true">
+      <g transform="translate(250 110)" fill="#DEE2FF">
+        <rect x="0" y="0" width="200" height="40" rx="10" opacity=".25" />
+        <rect x="0" y="56" width="200" height="40" rx="10" opacity=".4" />
+        <rect x="0" y="112" width="200" height="40" rx="10" opacity=".55" />
+      </g>
+      <circle cx="430" cy="186" r="10" fill="#FFC15A" /><circle cx="430" cy="186" r="22" fill="#FFC15A" opacity=".3" />
+      <path class="stitch" d="M40 390 C 120 330, 180 360, 250 290" />
+    </svg>
+    <div class="wrap">
+      <a class="back" href="index.html#work">Back to all work</a>
+      <h1>Academic Projects</h1>
+      <p class="lead">Lab and course projects from my time at Emory: a study of non-visual ways to read data, and a VR game built in a two-week design sprint.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+
+        <div class="cs-block">
+          <h2>Accessibility research</h2>
+          <div class="cs-block-body">
+            <div class="concept" style="margin-top:0; padding-top:0; border-top:0">
+              <h3>Encodings: Reading Data Without Sight</h3>
+              <p class="concept-meta">Research study, Emory University, Summer 2023</p>
+              <p>This study builds on <a href="https://arxiv.org/abs/2308.04392">Let's Get Vysical: Perceptual Accuracy in Visual and Tactile Encodings</a> (Xu, Williams and Wall, 2023), which adapted Cleveland and McGill's classic graphical perception study to compare how accurately people read data from visual and tactile encodings.</p>
+              <p>Our web experiment showed the same kinds of comparisons in three formats: visual encodings, plain tables, and enhanced tables that describe each shape's position and size. Participants worked through examples, practice rounds and trials for each format, then a short survey.</p>
+              <dl class="rows" style="margin-top:22px">
+                <div><dt>My role</dt><dd>Redesigned the enhanced tables after finding the original format far too complex for navigating data. Ran the study and led recruitment of participants who are blind or visually impaired.</dd></div>
+                <div><dt>Methods</dt><dd>Online perception experiment, examples and practice trials, participant survey, recruitment with blind and visually impaired communities</dd></div>
+                <div><dt>Outcome</dt><dd>Feedback from blind and visually impaired participants pointed to several weaknesses in our approach: the table-based encodings were not very beneficial to them.</dd></div>
+              </dl>
+              <p class="callout">The biggest lesson: test with the people a tool is meant for as early as possible. Their feedback showed problems we couldn't see from the inside.</p>
+              <div class="hero-actions" style="margin-top:22px">
+                <a class="btn btn-thread" href="https://arxiv.org/abs/2308.04392">Read the paper</a>
+                <a class="btn btn-dark" href="https://github.com/reecey22/encodings">View the experiment pages on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>VR and game design</h2>
+          <div class="cs-block-body">
+            <div class="concept" style="margin-top:0; padding-top:0; border-top:0">
+              <h3>The FINal Straw: A VR Game About Goldfish Care</h3>
+              <p class="concept-meta">Team project, two-week design sprint, Spring 2024</p>
+              <p>A mobile VR game about how <em>not</em> to take care of a goldfish, made for a Shinecon headset and controller. Players live three days as a goldfish and face what happens when its owner gets the basics wrong, from algae overgrowth to the wrong plants.</p>
+              <dl class="rows" style="margin-top:22px">
+                <div><dt>My role</dt><dd>Interaction developer: controller and keyboard input, camera rotation, scene reloading and the "You Died" end screens</dd></div>
+                <div><dt>Team</dt><dd>Four-person team; I contributed the interaction code</dd></div>
+                <div><dt>Tools</dt><dd>A-Frame (WebXR), JavaScript, HTML, 3D models and audio</dd></div>
+              </dl>
+              <div class="hero-actions" style="margin-top:22px">
+                <a class="btn btn-thread" href="https://medium.com/@dlinbec/the-fin-al-straw-3-days-in-the-life-of-a-goldfish-7feee6422ea7">Read the team's design write-up</a>
+                <a class="btn btn-dark" href="https://github.com/reecey22/goldfish-game">View the code on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Want to hear more about these projects?</h2>
+        <p class="lead">I'm happy to walk through what I built, what we learned and what I'd do differently.</p>
+        <div class="hero-actions">
+          <a class="btn btn-thread" href="index.html#contact">Send me a message</a>
+          <a class="btn btn-outline" href="index.html#work">Back to all work</a>
+        </div>
+        <div class="footer">
+          <span>© 2026 Shaniah Reece</span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assistant/sapphire.js?v=3" defer></script>
+  <script src="assistant/sounds.js?v=2" defer></script>
+  <script src="assistant/assistant.js?v=6" defer></script>
+</body>
+</html>
