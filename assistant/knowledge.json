@@ -160,7 +160,7 @@
         "stakeholder"
       ],
       "lead": "She gathers people in a circle, and wisdom flows.",
-      "answer": "Niah designs workshops so participants lead with their own knowledge. In her menopause study, women worked through realistic narratives of barriers to care and generated interventions for each one; her team then turned those into four app concepts. In DABW, she ran sister-circle design sessions where participants defined a problem from their own life, wrote user stories, sketched and built a prototype. She adapts activities for novice to intermediate skill levels and shares power on purpose, so facilitators sit beside participants, not in front of them.",
+      "answer": "Niah designs workshops so participants lead with their own knowledge. In a pilot for her menopause study, participants worked through AI-generated narratives of barriers to care and generated interventions for each one; her team then turned those into four example app concepts. Data from the study's workshop with women is still being analyzed. In DABW, she ran sister-circle design sessions where participants defined a problem from their own life, wrote user stories, sketched and built a prototype. She adapts activities for novice to intermediate skill levels and shares power on purpose, so facilitators sit beside participants, not in front of them.",
       "related": [
         "menopause",
         "dabw",
@@ -185,7 +185,7 @@
         "agent"
       ],
       "lead": "Yes. She walks among the machines of thought.",
-      "answer": "Yes. Niah is the lead researcher on a co-design study for an AI-supported chatbot that trains OB/GYN residents in menopause care through simulated patient scenarios. She designed the baseline survey on residents' knowledge and AI use, a focus-group question bank and a two-cohort protocol: one group defines requirements and boundaries for the tool, a second tests the prototype. Earlier phases explored where LLMs genuinely help, like answering questions, translating and summarizing care. She also prototypes with AI tools like Claude Code. <a href=\"menobots.html\">Read the case study</a>.",
+      "answer": "Yes. Niah is the lead researcher on a co-design study for an AI-supported chatbot that trains OB/GYN residents in menopause care through simulated patient scenarios. She designed the baseline survey on residents' knowledge and AI use, a focus-group question bank and a two-cohort protocol: one group defines requirements and boundaries for the tool, a second tests the prototype. An earlier pilot with AI-generated narratives explored where LLMs might help, like answering questions, translating and summarizing care. She also prototypes with AI tools like Claude Code. <a href=\"menobots.html\">Read the case study</a>.",
       "related": [
         "menopause",
         "prototype",
@@ -235,7 +235,7 @@
         "medical"
       ],
       "lead": "A quest to bring knowledge where it was missing.",
-      "answer": "It's a two-phase co-design study in Emory's CARE Lab on the menopause education gap. Phase 1: Niah led a workshop with women in menopause, then guided the team from their stories to four app concepts, including a bilingual app for undocumented women and an LLM-powered care-coordination app. The clear need was social support and education. Phase 2 (in progress): co-designing and evaluating an AI chatbot that trains OB/GYN residents through simulated, diverse patient scenarios. <a href=\"menobots.html\">Read the case study</a>.",
+      "answer": "It's a two-phase co-design study in Emory's CARE Lab on the menopause education gap. Phase 1: Niah led a workshop with women in menopause; that data is still being analyzed. Separately, a pilot with AI-generated menopause narratives surfaced design ideas, and the team built four example intervention concepts from it, including a bilingual app for undocumented women and an LLM-powered care-coordination app. These are illustrative, not findings from participants. Phase 2 (in progress): co-designing and evaluating an AI chatbot that trains OB/GYN residents through simulated, diverse patient scenarios. <a href=\"menobots.html\">Read the case study</a>.",
       "related": [
         "ai",
         "codesign",
