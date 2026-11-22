@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Academic Projects | Shaniah Reece</title>
-  <meta name="description" content="Academic projects by Shaniah Reece: a study of non-visual data encodings for blind and visually impaired people, and a team-built VR game." />
+  <meta name="description" content="Academic projects by Shaniah Reece: a study of non-visual data encodings for blind and visually impaired people, a team-built VR game and an Arduino game." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
@@ -37,7 +37,7 @@
     <div class="wrap">
       <a class="back" href="index.html#work">Back to all work</a>
       <h1>Academic Projects</h1>
-      <p class="lead">Lab and course projects from my time at Emory: a study of non-visual ways to read data, and a VR game built in a two-week design sprint.</p>
+      <p class="lead">Lab and course projects: a study of non-visual ways to read data, a VR game built in a two-week design sprint, and an Arduino guessing game.</p>
     </div>
   </header>
 
@@ -83,6 +83,27 @@
                 <a class="btn btn-thread" href="https://medium.com/@dlinbec/the-fin-al-straw-3-days-in-the-life-of-a-goldfish-7feee6422ea7">Read the team's design write-up</a>
                 <a class="btn btn-dark" href="https://github.com/reecey22/goldfish-game">View the code on GitHub</a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h2>Physical computing</h2>
+          <div class="cs-block-body">
+            <div class="concept" style="margin-top:0; padding-top:0; border-top:0">
+              <h3>Heads or Tails: An Arduino Guessing Game</h3>
+              <p class="concept-meta">Solo project, Physical Computing midterm, Fall 2024</p>
+              <p>A two-button coin-flip game on an Arduino and an 8&times;8 LED matrix. Press the left button for heads or the right for tails; the code flips a random coin and the matrix answers with a smiley face for a right guess or a sad face for a wrong one.</p>
+              <figure class="figure">
+                <video src="assets/pc-midterm-matrix-demo.mp4" poster="assets/pc-midterm-matrix-poster.jpg" controls muted playsinline loop preload="metadata" aria-label="Video: an 8 by 8 LED matrix on a breadboard flashes the letters O and K and their inverse"></video>
+                <figcaption>Early matrix test: drawing "OK" and its inverse from custom bitmaps</figcaption>
+              </figure>
+              <dl class="rows" style="margin-top:22px">
+                <div><dt>My role</dt><dd>Solo designer and developer: circuit, code, custom LED bitmaps and playtesting</dd></div>
+                <div><dt>Tools</dt><dd>Arduino, MAX7219 LED matrix, push buttons, Adafruit GFX library</dd></div>
+                <div><dt>Playtesting</dt><dd>With no instructions on the device, the player was confused at first, then worked out the controls by pressing buttons and watching the display. After that the game felt straightforward and the buttons satisfying to press, and the player started testing whether the "random" flips followed a pattern.</dd></div>
+              </dl>
+              <p class="callout">Even a two-button game needs a way to tell people how to play. The first press shouldn't be a guess.</p>
             </div>
           </div>
         </div>

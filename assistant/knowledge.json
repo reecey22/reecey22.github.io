@@ -305,10 +305,15 @@
         "game",
         "a-frame",
         "fin-al straw",
-        "final straw"
+        "final straw",
+        "arduino",
+        "heads or tails",
+        "coin flip",
+        "led matrix",
+        "midterm"
       ],
       "lead": "From data tables to fishbowls.",
-      "answer": "Two academic projects are on her <a href=\"academic-projects.html\">Academic projects page</a>:<ul><li><strong>Encodings (Summer 2023):</strong> a study building on <em>Let's Get Vysical</em> that tested visual encodings, plain tables and enhanced tables as ways to read data. Niah redesigned the enhanced tables after finding them far too complex to navigate, ran the study and led recruitment of blind and visually impaired participants. Their feedback showed the table-based approach wasn't very beneficial to them.</li><li><strong>The FINal Straw (Spring 2024):</strong> a mobile VR game about how not to care for a goldfish, built by a four-person team in a two-week sprint. Niah wrote the interaction code: controller input, camera rotation, scene reloading and the end screens.</li></ul>",
+      "answer": "Three academic projects are on her <a href=\"academic-projects.html\">Academic projects page</a>:<ul><li><strong>Encodings (Summer 2023):</strong> a study building on <em>Let's Get Vysical</em> that tested visual encodings, plain tables and enhanced tables as ways to read data. Niah redesigned the enhanced tables after finding them far too complex to navigate, ran the study and led recruitment of blind and visually impaired participants. Their feedback showed the table-based approach wasn't very beneficial to them.</li><li><strong>The FINal Straw (Spring 2024):</strong> a mobile VR game about how not to care for a goldfish, built by a four-person team in a two-week sprint. Niah wrote the interaction code: controller input, camera rotation, scene reloading and the end screens.</li><li><strong>Heads or Tails (Fall 2024):</strong> a solo Physical Computing midterm, a two-button coin-flip guessing game on an Arduino and an 8×8 LED matrix that shows a smiley or sad face. Playtesting showed that even a simple game needs a way to tell players how to start.</li></ul>",
       "related": [
         "tactile",
         "methods",
